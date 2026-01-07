@@ -37,7 +37,7 @@ export const quarkHandler = () => {
   }
 }
 
-let bonus = 0
+let bonus = 100 // Patreon bonus doesn't work, so this is done to get roughly the same benefit
 
 export const setQuarkBonus = (newBonus: number) => bonus = newBonus
 export const getQuarkBonus = () => bonus

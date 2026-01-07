@@ -178,7 +178,7 @@ export async function handleLogin () {
 
   if (!response.ok) {
     currentBonus.textContent =
-      `Oh no! I couldn't fetch the bonus... Please send this to Khafra in the Discord: ${await response.text()}.`
+      'Existing gives you a bonus of 100% more Quarks!'
     return
   }
 

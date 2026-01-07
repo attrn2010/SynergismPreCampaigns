@@ -105,7 +105,7 @@ export class BlueberryUpgrade extends DynamicUpgrade {
       if (buy === -1) {
         ambrosiaBudget = player.ambrosia
       } else if (buy <= 0) {
-        return Alert(i18next.t('octeract.buyLevel.cancelPurchase')) // For some reason this is in the Octeract section (???)
+        return Alert(i18next.t('ambrosia.cancelPurchase'))
       } else {
         ambrosiaBudget = buy
       }
@@ -117,7 +117,7 @@ export class BlueberryUpgrade extends DynamicUpgrade {
     }
 
     if (maxPurchasable === 0) {
-      return Alert(i18next.t('octeract.buyLevel.alreadyMax')) // Once again
+      return Alert(i18next.t('ambrosia.moduleMaxed'))
     }
 
     while (maxPurchasable > 0) {
@@ -144,11 +144,11 @@ export class BlueberryUpgrade extends DynamicUpgrade {
     }
 
     if (purchased === 0) {
-      return Alert(i18next.t('octeract.buyLevel.cannotAfford'))
+      return Alert(i18next.t('ambrosia.notEnoughAmbrosia'))
     }
     if (purchased > 1) {
       return Alert(
-        `${i18next.t('octeract.buyLevel.multiBuy', { n: format(purchased) })}`
+        `${i18next.t('ambrosia.ambrosiaMultiBuy', { n: format(purchased) })}`
       )
     }
 
@@ -191,7 +191,7 @@ export class BlueberryUpgrade extends DynamicUpgrade {
       }</span>`
       : `<span style="color: yellow"> ${
         i18next.t(
-          'octeract.buyLevel.cannotAfford'
+          'ambrosia.notEnoughAmbrosia'
         )
       }</span>`
 

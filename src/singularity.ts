@@ -98,7 +98,7 @@ export const updateSingularityPenalties = (): void => {
         ${platonic}
         ${hepteract}
         ${
-    singularityCount >= 270
+    singularityCount >= 270 + player.shopUpgrades.shopSingularityPenaltyDebuff
       ? i18next.t('singularity.penalties.penaltySmooth')
       : i18next.t('singularity.penalties.penaltyRough', {
         num: format(
@@ -278,7 +278,7 @@ export class SingularityUpgrade extends DynamicUpgrade {
     let GQBudget = player.goldenQuarks
 
     if (event.shiftKey) {
-      maxPurchasable = 100000
+      maxPurchasable = 1000000 // x10 the cap for my sanity if I somehow get far enough for this to matter
       const buy = Number(
         await Prompt(
           i18next.t('singularity.goldenQuarks.spendPrompt', {
@@ -836,9 +836,8 @@ export const singularityData: Record<
       return {
         bonus: n > 0,
         get desc () {
-          return i18next.t('singularity.data.singOcteractPatreonBonus.effect', {
-            n
-          })
+          return i18next.t(`singularity.data.singOcteractPatreonBonus.effect${n > 0 ? 'Have' : 'HaveNot'}`
+          )
         }
       }
     }
@@ -949,7 +948,7 @@ export const singularityData: Record<
   },
   wowPass3: {
     maxLevel: 1,
-    costPerLevel: 3e7 - 1,
+    costPerLevel: 29999999, // 3e7 - 1
     minimumSingularity: 83,
     effect: (n: number) => {
       return {
@@ -1269,7 +1268,7 @@ export const singularityData: Record<
   },
   singFastForward: {
     maxLevel: 1,
-    costPerLevel: 7e6 - 1,
+    costPerLevel: 6999999, // 7e6 - 1
     minimumSingularity: 50,
     effect: (n: number) => {
       return {
@@ -1285,7 +1284,7 @@ export const singularityData: Record<
   },
   singFastForward2: {
     maxLevel: 1,
-    costPerLevel: 1e11 - 1,
+    costPerLevel: 99999999999, // 1e11 - 1
     minimumSingularity: 147,
     effect: (n: number) => {
       return {
@@ -1344,20 +1343,18 @@ export const singularityData: Record<
   ultimatePen: {
     maxLevel: 1,
     costPerLevel: 2.22e22,
-    minimumSingularity: 300,
+    minimumSingularity: 277,
     effect: (n: number) => {
       return {
         bonus: n > 0,
         get desc () {
-          return i18next.t('singularity.data.ultimatePen.effect', {
-            n: n ? '' : 'NOT',
-            m: n > 0
-              ? ' However, the pen just ran out of ink. How will you get more?'
-              : ''
-          })
+          return i18next.t(
+            `singularity.data.ultimatePen.effect${n ? 'Have' : 'HaveNot'}`,
+          )
         }
       }
-    }
+    },
+    qualityOfLife: true
   },
   oneMind: {
     maxLevel: 1,
@@ -2579,7 +2576,7 @@ export const calculateEffectiveSingularities = (
 export const calculateNextSpike = (
   singularityCount: number = player.singularityCount
 ): number => {
-  const singularityPenaltyThreshold = [11, 26, 37, 51, 101, 151, 201, 216, 230, 270]
+  const singularityPenaltyThreshold = [11, 26, 37, 51, 101, 151, 201, 216, 231, 270]
   let penaltyDebuff = 0
   penaltyDebuff += player.shopUpgrades.shopSingularityPenaltyDebuff
 

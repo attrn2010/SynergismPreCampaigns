@@ -15,7 +15,7 @@
     "blueberryGeneration": "Each second, gain <<var(--amber-text-color)|{{chance}}>> seconds of Blueberry Time.",
     "perGen": "Currently gaining <<var(--amber-text-color)|{{guaranteed}}>> Ambrosia with a <<var(--amber-text-color)|{{extraChance}}%>> chance of another. [<<var(--lime-text-color)|Luck: ☘ {{ambrosiaLuck}}>>] {{extra}}",
     "blueberrySecond": "You currently have <<var(--amber-text-color)|{{blueberrySecond}}>> accumulated Blueberry Seconds! Generating Ambrosia when <<blue|{{thresholdTimer}}>> is accumulated.",
-    "bonuses": "Your ambrosia is giving <<var(--amber-text-color)|+{{cube}}%>> ALL cubes and <<cyan|+{{quark}}%>> Quarks!",
+    "bonuses": "Your lifetime Ambrosia is giving <<var(--amber-text-color)|+{{cube}}%>> ALL cubes and <<cyan|+{{quark}}%>> Quarks!",
     "prerequisite": "Prerequisites:",
     "prereqNotMet": " (Not Met!)",
     "blueberryCost": "Blueberries (To Activate):",
@@ -24,7 +24,11 @@
     "availableBlueberries": "You have <<lightblue|{{availableBlueberries}}>> unspent Blueberries. Unlock higher tier modules below using them!",
     "cubeUpgradeThresholds": "Your Blueberry Time requirements have been doubled <<cyan | {{threshold}}>> times due to lifetime Ambrosia. <<cyan | Blueberry Generation Speed +{{percent}}%>>!",
     "cubeUpgradeRedBarFills": "Your Red Bar has filled <<maroon | {{amount}}>> times while Cookie Upgrade 29 is purchased, giving <<green | +{{luck}} &#9752 Ambrosia Luck>>!",
-    "ambrosiaBuyPrompt": "How many Ambrosia would you like to spend? You have {{amount}} Ambrosia. Type -1 to use max!",
+    "ambrosiaBuyPrompt": "How much Ambrosia would you like to spend? You have {{amount}} Ambrosia. Type -1 to use max!",
+    "ambrosiaMultiBuy": "Purchased {{n}} levels!",
+    "cancelPurchase": "Purchase cancelled!",
+    "notEnoughAmbrosia": "You don't have enough Ambrosia!",
+    "moduleMaxed": "This module is already maxed!",
     "refund": "You have refunded all spent Blueberries and Ambrosia.",
     "refundWord": "Refund",
     "data": {
@@ -94,9 +98,9 @@
         "effect": "This second generation Luck module increases &#9752 Ambrosia Luck by {{amount}}"
       },
       "ambrosiaPatreon": {
-        "name": "Shameless, Ambrosial Patreon Reminder",
-        "description": "In every realm, Platonic sells out. +1% Blueberry Generation Speed for every +1% Quarks by the Patreon bonus!",
-        "effect": "Generous Patreon supporters grant you {{amount}}% more Blueberry Time Generation. If you are not already, consider buying PseudoCoins to support development!"
+        "name": "Ambrosia Made Twice as Nice",
+        "description": "Amazing! For a very cheap price, gain +100% Blueberry Time Generation!",
+        "effect": "This module gives {{amount}}% more Blueberry Time Generation."
       },
       "ambrosiaObtainium1": {
         "name": "RNG-based Obtainium Booster",
@@ -110,7 +114,7 @@
       },
       "ambrosiaHyperflux": {
         "name": "Hyperfluxed Wow! Cube Industrial Production",
-        "description": "Gain +1% cubes per level, per level of Platonic Upgrade 4x4 purchased (multiplicative!!!)",
+        "description": "Gain +1% 3-7D cubes per level, per level of Platonic Upgrade 4x4 purchased (multiplicative!!!)",
         "effect": "This module increases Cubes gain by {{amount}}%!"
       }
     },
@@ -169,33 +173,33 @@
       "34": "[{{number}}] Golden Paradise: Create 17,777 Alchemies.",
       "35": "[{{number}}] Unlocking secrets to the world: Create 42,777 Alchemies.",
       "36": "[{{number}}] Leveling up: Prestige for at least 1 Diamond.",
-      "37": "[{{number}}] High-Tiered: Prestige for at least 1e+6 Diamonds.",
-      "38": "[{{number}}] Highly Regarded: Prestige for at least 1e+100 Diamonds.",
-      "39": "[{{number}}] Prestigious: Prestige for at least 1e+1000 Diamonds.",
-      "40": "[{{number}}] Legendary: Prestige for at least 1e+10000 Diamonds.",
-      "41": "[{{number}}] Divine: Prestige for at least 1e+77777 Diamonds.",
-      "42": "[{{number}}] Perfectly Respected: Prestige for at least 1e+250000 Diamonds.",
+      "37": "[{{number}}] High-Tiered: Prestige for at least 1e6 Diamonds.",
+      "38": "[{{number}}] Highly Regarded: Prestige for at least 1e100 Diamonds.",
+      "39": "[{{number}}] Prestigious: Prestige for at least 1e1000 Diamonds.",
+      "40": "[{{number}}] Legendary: Prestige for at least 1e10,000 Diamonds.",
+      "41": "[{{number}}] Divine: Prestige for at least 1e77,777 Diamonds.",
+      "42": "[{{number}}] Perfectly Respected: Prestige for at least 1e250,000 Diamonds.",
       "43": "[{{number}}] A Simple Detour: Transcend for at least 1 Mythos.",
-      "44": "[{{number}}] Tunnel Vision: Transcend for at least 1e+6 Mythos.",
-      "45": "[{{number}}] Risen from the Ashes: Transcend for at least 1e+50 Mythos.",
-      "46": "[{{number}}] Paradigm Shift: Transcend for at least 1e+308 Mythos.",
-      "47": "[{{number}}] Preparation: Transcend for at least 1e+2000 Mythos.",
-      "48": "[{{number}}] Revising the Plan: Transcend for at least 1e+25000 Mythos.",
-      "49": "[{{number}}] Leaving the Universe: Transcend for at least 1e+100000 Mythos.",
+      "44": "[{{number}}] Tunnel Vision: Transcend for at least 1e6 Mythos.",
+      "45": "[{{number}}] Risen from the Ashes: Transcend for at least 1e50 Mythos.",
+      "46": "[{{number}}] Paradigm Shift: Transcend for at least 1e308 Mythos.",
+      "47": "[{{number}}] Preparation: Transcend for at least 1e2000 Mythos.",
+      "48": "[{{number}}] Revising the Plan: Transcend for at least 1e25,000 Mythos.",
+      "49": "[{{number}}] Leaving the Universe: Transcend for at least 1e100,000 Mythos.",
       "50": "[{{number}}] Going Quantum: Reincarnate for at least 1 Particle.",
       "51": "[{{number}}] Tunneling Vision: Reincarnate for at least 100,000 Particles.",
-      "52": "[{{number}}] Simulating the World: Reincarnate for at least 1e+30 Particles.",
-      "53": "[{{number}}] Multidimensional Creation: Reincarnate for at least 1e+200 Particles.",
-      "54": "[{{number}}] Lepton Dance: Reincarnate for at least 1e+1500 Particles.",
-      "55": "[{{number}}] Do we have enough yet?: Reincarnate for at least 1e+5000 Particles.",
-      "56": "[{{number}}] I Feel Luck in My Cells: Reincarnate for at least 1e+7777 Particles.",
+      "52": "[{{number}}] Simulating the World: Reincarnate for at least 1e30 Particles.",
+      "53": "[{{number}}] Multidimensional Creation: Reincarnate for at least 1e200 Particles.",
+      "54": "[{{number}}] Lepton Dance: Reincarnate for at least 1e1500 Particles.",
+      "55": "[{{number}}] Do we have enough yet?: Reincarnate for at least 1e5000 Particles.",
+      "56": "[{{number}}] I Feel Luck in My Cells: Reincarnate for at least 1e7777 Particles.",
       "57": "[{{number}}] One Way Only: Prestige without buying Multipliers.",
-      "58": "[{{number}}] Authentic Shifting: Transcend without having bought a Multiplier.",
-      "59": "[{{number}}] The Singularity: Reincarnate without having bought a Multiplier.",
+      "58": "[{{number}}] Authentic Shifting: Transcend without buying Multipliers.",
+      "59": "[{{number}}] The Singularity: Reincarnate without buying Multipliers.",
       "60": "[{{number}}] Gotta go SLOW!: Prestige without buying Accelerators or Accelerator Boosts.",
-      "61": "[{{number}}] I'm really going slow: Transcend without having bought Accelerators or Boosts.",
-      "62": "[{{number}}] Are we there yet?: Reincarnate without having bought Accelerators or Boosts.",
-      "63": "[{{number}}] A careful search for Diamonds: Get 1e120,000 Coins in [Reduced Diamonds] without buying Accelerators or Boosts.",
+      "61": "[{{number}}] I'm really going slow: Transcend without buying Accelerators or Accelerator Boosts.",
+      "62": "[{{number}}] Are we there yet?: Reincarnate without buying Accelerators or Accelerator Boosts.",
+      "63": "[{{number}}] A careful search for Diamonds: Get 1e120,000 Coins in 'Reduced Diamonds' without buying Accelerators or Accelerator Boosts.",
       "64": "[{{number}}] Very Based: Prestige without purchasing Coin Upgrades.",
       "65": "[{{number}}] Miser: Transcend without purchasing Coin Upgrades.",
       "66": "[{{number}}] True Miser: Transcend without purchasing Coin or Diamond Upgrades.",
@@ -207,79 +211,79 @@
       "72": "[{{number}}] More Out of Order: Buy Generator Upgrade Row 1, #3 first in a Transcension (III -> II)",
       "73": "[{{number}}] Four's a Company: Buy Generator Upgrade Row 1, #4 first in a Transcension (II -> I)",
       "74": "[{{number}}] Five's a Croud: Buy Generator Upgrade Row 1, #5 first in a Transcension (I -> V)",
-      "75": "[{{number}}] Vaseline without the Machine: Exit [No Multiplier] with at least 1e1000 coins and without any of the row 1 generator upgrades.",
-      "76": "[{{number}}] Rage against the Machine: Exit [No Accelerator] with at least 1e1000 coins and without any of the row 1 generator upgrades.",
-      "77": "[{{number}}] Amish Paradise: Exit [No Shards] with at least 1e99,999 coins and without any of the row 1 generator upgrades.",
-      "78": "[{{number}}] Single-Cell: Complete [No Multiplier] once.",
-      "79": "[{{number}}] Solidarity: Complete [No Multiplier] three times.",
-      "80": "[{{number}}] Duplication-Free!: Complete [No Multiplier] five times.",
-      "81": "[{{number}}] Multitasking Challenged: Complete [No Multiplier] ten times.",
-      "82": "[{{number}}] No Deaths: Complete [No Multiplier] twenty times.",
-      "83": "[{{number}}] Population One: Complete [No Multiplier] fifty times.",
-      "84": "[{{number}}] Insert Another Token: Complete [No Multiplier] seventy-five times.",
-      "85": "[{{number}}] Slow Start: Complete [No Accelerator] once",
-      "86": "[{{number}}] Respawn Rate -12%: Complete [No Accelerator] three times.",
-      "87": "[{{number}}] Putting the Breaks On: Complete [No Accelerator] five times.",
-      "88": "[{{number}}] Racing a Sloth...: Complete [No Accelerator] ten times.",
-      "89": "[{{number}}] ... and Losing.: Complete [No Accelerator] twenty times.",
-      "90": "[{{number}}] Planck Distance Traveled: Complete [No Accelerator] fifty times.",
-      "91": "[{{number}}] Inverse-Ackermann Growth: Complete [No Accelerator] seventy-five times.",
-      "92": "[{{number}}] Intact: Complete [No Shards] once.",
-      "93": "[{{number}}] Augments are Stupid!: Complete [No Shards] three times.",
-      "94": "[{{number}}] Grandmasters are Brilliant!: Complete [No Shards] five times.",
-      "95": "[{{number}}] Gotta get those Grandmasters Stronger: Complete [No Shards] ten times.",
-      "96": "[{{number}}] Summoning Enhancements: Complete [No Shards] twenty times.",
-      "97": "[{{number}}] Magic 99/99: Complete [No Shards] fifty times.",
-      "98": "[{{number}}] Perfect Foresight: Complete [No Shards] seventy-five times.",
-      "99": "[{{number}}] Inflation: Complete [Cost+] once.",
-      "100": "[{{number}}] Hyperinflation: Complete [Cost+] three times.",
-      "101": "[{{number}}] Market Bubble: Complete [Cost+] five times.",
-      "102": "[{{number}}] Bull Market: Complete [Cost+] ten times.",
-      "103": "[{{number}}] Wealth Inequality: Complete [Cost+] twenty times.",
-      "104": "[{{number}}] Severe Overpay: Complete [Cost+] fifty times.",
-      "105": "[{{number}}] Societal Collapse: Complete [Cost+] seventy-five times.",
-      "106": "[{{number}}] Excavation: Complete [Reduced Diamonds] once.",
-      "107": "[{{number}}] Digging Deep: Complete [Reduced Diamonds] three times.",
-      "108": "[{{number}}] Frack As Needed: Complete [Reduced Diamonds] five times.",
-      "109": "[{{number}}] Unobtainium Pickaxe: Complete [Reduced Diamonds] ten times.",
-      "110": "[{{number}}] Fortune III: Complete [Reduced Diamonds] twenty times.",
-      "111": "[{{number}}] Every kiss...: Complete [Reduced Diamonds] fifty times.",
-      "112": "[{{number}}] ...begins with K.: Complete [Reduced Diamonds] seventy-five times.",
-      "113": "[{{number}}] Tax evasion!: Complete {[Tax+]} once.",
-      "114": "[{{number}}] Keeping up with the Joneses: Complete {[Tax+]} twice.",
-      "115": "[{{number}}] Offshore deposits: Complete {[Tax+]} three times.",
-      "116": "[{{number}}] Bribing officials: Complete {[Tax+]} five times.",
-      "117": "[{{number}}] Becoming President: Complete {[Tax+]} ten times.",
-      "118": "[{{number}}] Charitable Donation: Complete {[Tax+]} fifteen times.",
-      "119": "[{{number}}] IRS Audit: Complete {[Tax+]} twenty-five times.",
-      "120": "[{{number}}] Is there anybody in there?: Complete {[No Accelerator/Multiplier]} once.",
-      "121": "[{{number}}] Human being: Complete {[No Accelerator/Multiplier]} twice.",
-      "122": "[{{number}}] Interdimensional: Complete {[No Accelerator/Multiplier]} three times.",
-      "123": "[{{number}}] A slow nickel: Complete {[No Accelerator/Multiplier]} five times.",
-      "124": "[{{number}}] Multipliers don't even work 0/5: Complete {[No Accelerator/Multiplier]} ten times.",
-      "125": "[{{number}}] Accelerators don't even work -5/5: Complete {[No Accelerator/Multiplier]} fifteen times.",
-      "126": "[{{number}}] ACCELERATOR BOOSTS DON'T EVEN WORK -100/5: Complete {[No Accelerator/Multiplier]} twenty-five times.",
-      "127": "[{{number}}] I hate this challenge: Complete Cost++ Once.",
-      "128": "[{{number}}] A costly mistake: Complete Cost++ Twice.",
-      "129": "[{{number}}] Impetus: Complete Cost++ Three Times.",
-      "130": "[{{number}}] Are you broke yet? Complete Cost++ Five Times.",
-      "131": "[{{number}}] The world of Finance: Complete Cost++ Ten Times.",
-      "132": "[{{number}}] Marginal Gains: Complete Cost++ Twenty Times.",
-      "133": "[{{number}}] I buy these: Complete Cost++ Twenty-Five Times.",
-      "134": "[{{number}}] Agnostic: Complete No Runes Once.",
-      "135": "[{{number}}] Ant-i Runes: Complete No Runes Twice.",
-      "136": "[{{number}}] Isn't it getting tiresome?: Complete No Runes Three Times.",
-      "137": "[{{number}}] Machine does not accept offerings: Complete No Runes Five Times.",
-      "138": "[{{number}}] Runes Suck 1/5: Complete No Runes Ten Times.",
-      "139": "[{{number}}] I didn't even notice Prism was gone: Complete No Runes Twenty Times.",
-      "140": "[{{number}}] Atheist: Complete No Runes Twenty-Five Times.",
-      "141": "[{{number}}] Sadism: Complete {[Sadistic I]} Once.",
-      "142": "[{{number}}] Masochism: Complete {[Sadistic I]} Twice.",
-      "143": "[{{number}}] Insanity: Complete {[Sadistic I]} Three Times.",
-      "144": "[{{number}}] How? Complete {[Sadistic I]} Five Times.",
-      "145": "[{{number}}] Why? Complete {[Sadistic I]} Ten Times.",
-      "146": "[{{number}}] Descend: Complete {[Sadistic I]} Twenty Times.",
-      "147": "[{{number}}] End of the Universe: Complete {[Sadistic I]} Twenty-Five Times.",
+      "75": "[{{number}}] Vaseline without the Machine: Exit 'No Multipliers' with at least 1e1000 coins and without any of the row 1 generator upgrades.",
+      "76": "[{{number}}] Rage against the Machine: Exit 'No Accelerators' with at least 1e1000 coins and without any of the row 1 generator upgrades.",
+      "77": "[{{number}}] Amish Paradise: Exit 'No Shards' with at least 1e99,999 coins and without any of the row 1 generator upgrades.",
+      "78": "[{{number}}] Single-Cell: Complete 'No Multipliers' once.",
+      "79": "[{{number}}] Solidarity: Complete 'No Multipliers' three times.",
+      "80": "[{{number}}] Duplication-Free!: Complete 'No Multipliers' five times.",
+      "81": "[{{number}}] Multitasking Challenged: Complete 'No Multipliers' ten times.",
+      "82": "[{{number}}] No Deaths: Complete 'No Multipliers' twenty times.",
+      "83": "[{{number}}] Population One: Complete 'No Multipliers' fifty times.",
+      "84": "[{{number}}] Insert Another Token: Complete 'No Multipliers' seventy-five times.",
+      "85": "[{{number}}] Slow Start: Complete 'No Accelerators' once",
+      "86": "[{{number}}] Respawn Rate -12%: Complete 'No Accelerators' three times.",
+      "87": "[{{number}}] Putting the Breaks On: Complete 'No Accelerators' five times.",
+      "88": "[{{number}}] Racing a Sloth...: Complete 'No Accelerators' ten times.",
+      "89": "[{{number}}] ... and Losing.: Complete 'No Accelerators' twenty times.",
+      "90": "[{{number}}] Planck Distance Traveled: Complete 'No Accelerators' fifty times.",
+      "91": "[{{number}}] Inverse-Ackermann Growth: Complete 'No Accelerators' seventy-five times.",
+      "92": "[{{number}}] Intact: Complete 'No Shards' once.",
+      "93": "[{{number}}] Augments are Stupid!: Complete 'No Shards' three times.",
+      "94": "[{{number}}] Grandmasters are Brilliant!: Complete 'No Shards' five times.",
+      "95": "[{{number}}] Gotta get those Grandmasters Stronger: Complete 'No Shards' ten times.",
+      "96": "[{{number}}] Summoning Enhancements: Complete 'No Shards' twenty times.",
+      "97": "[{{number}}] Magic 99/99: Complete 'No Shards' fifty times.",
+      "98": "[{{number}}] Perfect Foresight: Complete 'No Shards' seventy-five times.",
+      "99": "[{{number}}] Inflation: Complete 'Cost+' once.",
+      "100": "[{{number}}] Hyperinflation: Complete 'Cost+' three times.",
+      "101": "[{{number}}] Market Bubble: Complete 'Cost+' five times.",
+      "102": "[{{number}}] Bull Market: Complete 'Cost+' ten times.",
+      "103": "[{{number}}] Wealth Inequality: Complete 'Cost+' twenty times.",
+      "104": "[{{number}}] Severe Overpay: Complete 'Cost+' fifty times.",
+      "105": "[{{number}}] Societal Collapse: Complete 'Cost+' seventy-five times.",
+      "106": "[{{number}}] Excavation: Complete 'Reduced Diamonds' once.",
+      "107": "[{{number}}] Digging Deep: Complete 'Reduced Diamonds' three times.",
+      "108": "[{{number}}] Frack As Needed: Complete 'Reduced Diamonds' five times.",
+      "109": "[{{number}}] Unobtainium Pickaxe: Complete 'Reduced Diamonds' ten times.",
+      "110": "[{{number}}] Fortune III: Complete 'Reduced Diamonds' twenty times.",
+      "111": "[{{number}}] Every kiss...: Complete 'Reduced Diamonds' fifty times.",
+      "112": "[{{number}}] ...begins with K.: Complete 'Reduced Diamonds' seventy-five times.",
+      "113": "[{{number}}] Tax evasion!: Complete 'Tax+' once.",
+      "114": "[{{number}}] Keeping up with the Joneses: Complete 'Tax+' twice.",
+      "115": "[{{number}}] Offshore deposits: Complete 'Tax+' three times.",
+      "116": "[{{number}}] Bribing officials: Complete 'Tax+' five times.",
+      "117": "[{{number}}] Becoming President: Complete 'Tax+' ten times.",
+      "118": "[{{number}}] Charitable Donation: Complete 'Tax+' fifteen times.",
+      "119": "[{{number}}] IRS Audit: Complete 'Tax+' twenty-five times.",
+      "120": "[{{number}}] Is there anybody in there?: Complete 'No Multipliers/Accelerators' once.",
+      "121": "[{{number}}] Human being: Complete 'No Multipliers/Accelerators' twice.",
+      "122": "[{{number}}] Interdimensional: Complete 'No Multipliers/Accelerators' three times.",
+      "123": "[{{number}}] A slow nickel: Complete 'No Multipliers/Accelerators' five times.",
+      "124": "[{{number}}] Multipliers don't even work 0/5: Complete 'No Multipliers/Accelerators' ten times.",
+      "125": "[{{number}}] Accelerators don't even work -5/5: Complete 'No Multipliers/Accelerators' fifteen times.",
+      "126": "[{{number}}] ACCELERATOR BOOSTS DON'T EVEN WORK -100/5: Complete 'No Multipliers/Accelerators' twenty-five times.",
+      "127": "[{{number}}] I hate this challenge: Clear 'Cost++' once.",
+      "128": "[{{number}}] A costly mistake: Complete 'Cost++' twice.",
+      "129": "[{{number}}] Impetus: Complete 'Cost++' three times.",
+      "130": "[{{number}}] Are you broke yet? Complete 'Cost++' five times.",
+      "131": "[{{number}}] The world of Finance: Complete 'Cost++' ten times.",
+      "132": "[{{number}}] Marginal Gains: Complete 'Cost++' twenty times.",
+      "133": "[{{number}}] I buy these: Complete 'Cost++' twenty-five times.",
+      "134": "[{{number}}] Agnostic: Complete 'No Runes' once.",
+      "135": "[{{number}}] Ant-i Runes: Complete 'No Runes' twice.",
+      "136": "[{{number}}] Isn't it getting tiresome?: Complete 'No Runes' three times.",
+      "137": "[{{number}}] Machine does not accept offerings: Complete 'No Runes' five times.",
+      "138": "[{{number}}] Runes Suck 1/5: Complete 'No Runes' ten times.",
+      "139": "[{{number}}] I didn't even notice Prism was gone: Complete 'No Runes' twenty times.",
+      "140": "[{{number}}] Atheist: Complete 'No Runes' twenty-five times.",
+      "141": "[{{number}}] Sadism: Complete 'Sadistic I' once.",
+      "142": "[{{number}}] Masochism: Complete 'Sadistic I' twice.",
+      "143": "[{{number}}] Insanity: Complete 'Sadistic I' three times.",
+      "144": "[{{number}}] How? Complete 'Sadistic I' five times.",
+      "145": "[{{number}}] Why? Complete 'Sadistic I' ten times.",
+      "146": "[{{number}}] Descend: Complete 'Sadistic I' twenty times.",
+      "147": "[{{number}}] End of the Universe: Complete 'Sadistic I' twenty-five times.",
       "148": "[{{number}}] Gas gas gas: Purchase 5 Accelerators.",
       "149": "[{{number}}] 0 to 25: Purchase 25 Accelerators.",
       "150": "[{{number}}] 0 to 100: Purchase 100 Accelerators",
@@ -307,14 +311,14 @@
       "172": "[{{number}}] Accumulation of Food: Obtain 1e20 Galactic Crumbs.",
       "173": "[{{number}}] Cookie Clicking: Obtain 1e40 Galactic Crumbs.",
       "174": "[{{number}}] Unlimited Bread Sticks!: Obtain 1e500 Galactic Crumbs.",
-      "175": "[{{number}}] Restaurant at the end of the Universe: Obtain 1e2500 Galactic Crumbs.",
+      "175": "[{{number}}] Restaurant at the End of the Universe: Obtain 1e2500 Galactic Crumbs.",
       "176": "[{{number}}] Ant-icipation!: Amass a 2x Ant Multiplier through sacrifice and own a Tier 2 Ant.",
       "177": "[{{number}}] Ant-ecedent: Amass a 6x Ant Multiplier through sacrifice and own a Tier 3 Ant.",
       "178": "[{{number}}] Ants are friends, not food!: Amass a 20x Ant Multiplier through sacrifice and own a Tier 4 Ant.",
       "179": "[{{number}}] Ant Devil?: Amass a 100x Ant Multiplier through sacrifice and own a Tier 5 Ant.",
       "180": "[{{number}}] The world's best chef: Amass a 500x Ant Multiplier through sacrifice and own a Tier 6 Ant.",
       "181": "[{{number}}] 6 Michelin Stars: Amass a 6,666x Ant Multiplier through sacrifice and own a Tier 7 Ant.",
-      "182": "[{{number}}] Keys to the Restaurant at the end of the Universe: Amass a 77,777x Ant Multiplier through sacrifice and own a Tier 8 Ant.",
+      "182": "[{{number}}] Keys to the Restaurant at the End of the Universe: Amass a 77,777x Ant Multiplier through sacrifice and own a Tier 8 Ant.",
       "183": "[{{number}}] Up: Ascend Once.",
       "184": "[{{number}}] Double-Up: Ascend Twice.",
       "185": "[{{number}}] Give me Ten!: Ascend Ten Times.",
@@ -329,27 +333,27 @@
       "194": "[{{number}}] Planck^(-1): Attain a constant of 1.509e33.",
       "195": "[{{number}}] Epsilon > a lot: Attain a constant of 1e66.",
       "196": "[{{number}}] NUM_MAX: Attain a constant of 1.8e308.",
-      "197": "[{{number}}] Casualties: Clear 'Reduced Ants' challenge once.",
-      "198": "[{{number}}] Fatalities: Clear 'Reduced Ants' challenge twice.",
-      "199": "[{{number}}] Destruction: Clear 'Reduced Ants' challenge three times.",
-      "200": "[{{number}}] War, what is it good for?: Clear 'Reduced Ants' challenge five times.",
-      "201": "[{{number}}] Absolutely everything.: Clear 'Reduced Ants' challenge ten times.",
-      "202": "[{{number}}] Perfect Storm: Clear 'Reduced Ants' challenge twenty times.",
-      "203": "[{{number}}] Immaculate Storm: Clear 'Reduced Ants' challenge thirty times.",
-      "204": "[{{number}}] I didn't need those stupid reincarnations anyway!: Clear 'No Reincarnation' challenge once.",
-      "205": "[{{number}}] [x1,x2,0,x3]: Clear 'No Reincarnation' challenge twice.",
-      "206": "[{{number}}] Nonmetaphysical: Clear 'No Reincarnation' challenge three times.",
-      "207": "[{{number}}] Living alone: Clear 'No Reincarnation' challenge five times.",
-      "208": "[{{number}}] DM me on discord if you read these names: Clear 'No Reincarnation' challenge ten times.",
-      "209": "[{{number}}] Yeah: Clear 'No Reincarnation' challenge twenty times.",
-      "210": "[{{number}}] Science! Clear 'No Reincarnation' challenge thirty times.",
-      "211": "[{{number}}] The IRS strikes back: Clear 'Tax+++' challenge once.",
-      "212": "[{{number}}] Fiscal Policy: Clear 'Tax+++' challenge twice.",
-      "213": "[{{number}}] Economic Boom: Clear 'Tax+++' challenge three times.",
-      "214": "[{{number}}] Ant-onomics: Clear 'Tax+++' challenge five times.",
-      "215": "[{{number}}] 'Wow Platonic Tax sucks 1/5': Clear 'Tax+++' challenge ten times.",
-      "216": "[{{number}}] Haha this is hard for some reason: Clear 'Tax+++' challenge twenty times.",
-      "217": "[{{number}}] Taxes are hard: Clear 'Tax+++' challenge thirty times.",
+      "197": "[{{number}}] Casualties: Clear 'Reduced Ants' once.",
+      "198": "[{{number}}] Fatalities: Clear 'Reduced Ants' twice.",
+      "199": "[{{number}}] Destruction: Clear 'Reduced Ants' three times.",
+      "200": "[{{number}}] War, what is it good for?: Clear 'Reduced Ants' five times.",
+      "201": "[{{number}}] Absolutely everything.: Clear 'Reduced Ants' ten times.",
+      "202": "[{{number}}] Perfect Storm: Clear 'Reduced Ants' twenty times.",
+      "203": "[{{number}}] Immaculate Storm: Clear 'Reduced Ants' thirty times.",
+      "204": "[{{number}}] I didn't need those stupid reincarnations anyway!: Clear 'No Reincarnations' once.",
+      "205": "[{{number}}] [x1,x2,0,x3]: Clear 'No Reincarnations' twice.",
+      "206": "[{{number}}] Nonmetaphysical: Clear 'No Reincarnations' three times.",
+      "207": "[{{number}}] Living alone: Clear 'No Reincarnations' five times.",
+      "208": "[{{number}}] DM me on discord if you read these names: Clear 'No Reincarnations' ten times.",
+      "209": "[{{number}}] Yeah: Clear 'No Reincarnations' twenty times.",
+      "210": "[{{number}}] Science! Clear 'No Reincarnations' thirty times.",
+      "211": "[{{number}}] The IRS strikes back: Clear 'Tax+++' once.",
+      "212": "[{{number}}] Fiscal Policy: Clear 'Tax+++' twice.",
+      "213": "[{{number}}] Economic Boom: Clear 'Tax+++' three times.",
+      "214": "[{{number}}] Ant-onomics: Clear 'Tax+++' five times.",
+      "215": "[{{number}}] 'Wow Platonic Tax sucks 1/5': Clear 'Tax+++' ten times.",
+      "216": "[{{number}}] Haha this is hard for some reason: Clear 'Tax+++' twenty times.",
+      "217": "[{{number}}] Taxes are hard: Clear 'Tax+++' thirty times.",
       "218": "[{{number}}] Shiny Blue Rock: Clear 'No Research' once.",
       "219": "[{{number}}] It's like Avatar: Clear 'No Research' twice.",
       "220": "[{{number}}] It's like Unobtainium: Clear 'No Research' three times.",
@@ -358,24 +362,24 @@
       "223": "[{{number}}] It's: Clear 'No Research' twenty times.",
       "224": "[{{number}}] It: Clear 'No Research' thirty times.",
       "225": "[{{number}}] Pretty Corrupt: Clear an Ascension with above 100,000 score.",
-      "226": "[{{number}}] Bought out: Clear an Ascension with above 1 million score.",
-      "227": "[{{number}}] Utterly Corrupt: Clear an Ascension with above 10 million score.",
-      "228": "[{{number}}] Antitrust: Clear an Ascension with above 100 million score.",
-      "229": "[{{number}}] Ant-i-trust: Clear an Ascension with above 1 billion score.",
-      "230": "[{{number}}] This is pretty unfair: Clear an Ascension with above 5 billion score.",
-      "231": "[{{number}}] Antichrist: Clear an Ascension with above 25 billion score.",
-      "232": "[{{number}}] Highly Blessed: Level your Speed Rune Blessing to 100,000.",
-      "233": "[{{number}}] Divine Blessing: Level your Speed Rune Blessing to 100,000,000.",
-      "234": "[{{number}}] Blessing III: Level your Speed Rune Blessing to 100 billion.",
-      "235": "[{{number}}] Spirit I: Level your Speed Spirit to 1 Million.",
-      "236": "[{{number}}] Spirit II: Level your Speed Spirit to 1 Billion.",
-      "237": "[{{number}}] Spirit III: Level your Speed Spirit to 1 Trillion.",
+      "226": "[{{number}}] Bought out: Clear an Ascension with above 1e6 score.",
+      "227": "[{{number}}] Utterly Corrupt: Clear an Ascension with above 1e7 score.",
+      "228": "[{{number}}] Antitrust: Clear an Ascension with above 1e8 score.",
+      "229": "[{{number}}] Ant-i-trust: Clear an Ascension with above 1e9 score.",
+      "230": "[{{number}}] This is pretty unfair: Clear an Ascension with above 5e9 score.",
+      "231": "[{{number}}] Antichrist: Clear an Ascension with above 2.5e10 score.",
+      "232": "[{{number}}] Highly Blessed: Level your Speed Blessing to 100,000.",
+      "233": "[{{number}}] Divine Blessing: Level your Speed Blessing to 100,000,000.",
+      "234": "[{{number}}] Blessing III: Level your Speed Blessing to 1e11.",
+      "235": "[{{number}}] It's like Blessings 2.0: Level your Speed Spirit to 1,000,000.",
+      "236": "[{{number}}] Feeling Spiritual: Level your Speed Spirit to 1,000,000,000.",
+      "237": "[{{number}}] Spirit III: Level your Speed Spirit to 1e12.",
       "238": "[{{number}}] Three-folded: [Hint: you may want to look into the inception]",
       "239": "[{{number}}] Seeing red: [Hint: you may need a lot of red items]",
-      "240": "[{{number}}] ASCENDED: [Hint: you may need a LOT of Ascensions OR an particularly amazing Ascension]",
+      "240": "[{{number}}] ASCENDED: [Hint: you may need a LOT of Ascensions OR a particularly amazing Ascension]",
       "241": "[{{number}}] Aesop: [Hint: you gotta be pretty dang slow]",
       "242": "[{{number}}] Aesop's Revenge: [Hint: you gotta be pretty dang fast]",
-      "243": "[{{number}}] Unsmith: [Hint: unsmith emoji :unsmith: can be a pretty good input]",
+      "243": "[{{number}}] Unsmith: [Hint: :unsmith: can be a pretty good input]",
       "244": "[{{number}}] Smith: [Hint: :antismith: looks promising as well]",
       "245": "[{{number}}] BLESSED: [Hint: Your Speed Blessing best be unreasonably high!]",
       "246": "[{{number}}] Why? [Hint: Sometimes even 1 in over a Trillion counts!]",
@@ -392,14 +396,14 @@
       "257": "[{{number}}] Arguably moral: Clear an Ascension with 4e19 score.",
       "258": "[{{number}}] Khafra's Personal Best: Clear an Ascension with 1e21 score.",
       "259": "[{{number}}] 100 million million million!: Clear an Ascension with 1e23 score.",
-      "260": "[{{number}}] Highly Dimensional Being: Ascend a total of 10 million times.",
-      "261": "[{{number}}] Ant God's upheaval: Ascend a total of 100 million times.",
-      "262": "[{{number}}] Did you forget about Ant God?: Ascend a total of 2 billion times.",
-      "263": "[{{number}}] Ant God is unemployed thanks to you: Ascend a total of 40 billion times.",
-      "264": "[{{number}}] I hope you're happy with yourself: Ascend a total of 800 billion times.",
-      "265": "[{{number}}] Oh well: Ascend a total of 16 trillion times.",
-      "266": "[{{number}}] Keep up the gradual numerical increase: Ascend a total of 100 trillion times.",
-      "267": "[{{number}}] Eigenvalued: Achieve a constant of 1e1,000.",
+      "260": "[{{number}}] Highly Dimensional Being: Ascend a total of 1e7 times.",
+      "261": "[{{number}}] Ant God's upheaval: Ascend a total of 1e8 times.",
+      "262": "[{{number}}] Did you forget about Ant God?: Ascend a total of 2e9 times.",
+      "263": "[{{number}}] Ant God is unemployed thanks to you: Ascend a total of 4e10 times.",
+      "264": "[{{number}}] I hope you're happy with yourself: Ascend a total of 8e11 times.",
+      "265": "[{{number}}] Oh well: Ascend a total of 1.6e12 times.",
+      "266": "[{{number}}] Keep up the gradual numerical increase: Ascend a total of 1e14 times.",
+      "267": "[{{number}}] Eigenvalued: Achieve a constant of 1e1000.",
       "268": "[{{number}}] Achieve Mathematics: Achieve a constant of 1e5,000.",
       "269": "[{{number}}] Ramsay (5,5): Achieve a constant of 1e15,000.",
       "270": "[{{number}}] What comes after this?: Achieve a constant of 1e50,000.",
@@ -415,27 +419,27 @@
       "280": "[{{number}}] Inception: Singularity 10 times."
     },
     "rewards": {
-      "3": "Gain +.05% to Accelerator Power.",
+      "3": "Gain +0.05% to Accelerator Power.",
       "4": "Start Transcensions/Challenges with Worker Autobuyer unlocked.",
       "5": "Gain +1 Accelerator per 500 Workers owned.",
       "6": "Gain +1 Multiplier per 1,000 Workers owned.",
       "7": "Gain +1 Accelerator Boost per 2,000 workers owned.",
-      "10": "Gain +.10% to Accelerator Power.",
+      "10": "Gain +0.10% to Accelerator Power.",
       "11": "Start Transcensions/Challenges with Investment Autobuyer unlocked.",
       "12": "Gain +1 Accelerator per 500 Investments owned.",
       "13": "Gain +1 Multiplier per 1,000 Investments owned.",
       "14": "Gain +1 Accelerator Boost per 2,000 Investments owned.",
-      "17": "Gain +.15% to Accelerator Power.",
+      "17": "Gain +0.15% to Accelerator Power.",
       "18": "Start Transcensions/Challenges with Printer Autobuyer unlocked.",
       "19": "Gain +1 Accelerator per 500 Printers owned.",
       "20": "Gain +1 Multiplier per 1,000 Printers owned.",
       "21": "Gain +1 Accelerator Boost per 2,000 Printers owned.",
-      "24": "Gain +.20% to Accelerator Power.",
+      "24": "Gain +0.20% to Accelerator Power.",
       "25": "Start Transcensions/Challenges with Coin Mint Autobuyer unlocked.",
       "26": "Gain +1 Accelerator per 500 Mints owned.",
       "27": "Gain +1 Multiplier per 1,000 Mints owned.",
       "28": "Gain +1 Accelerator Boost per 2,000 Mints owned.",
-      "31": "Gain +.25% to Accelerator Power.",
+      "31": "Gain +0.25% to Accelerator Power.",
       "32": "Start Transcensions/Challenges with Alchemy Autobuyer unlocked.",
       "33": "Gain 10% more Offerings from resets || +1 Accelerator per 500 Alchemies!",
       "34": "Gain 15% more Offerings from resets (stacks multiplicatively!) || +1 Multiplier per 1,000 Alchemies!",
@@ -445,9 +449,9 @@
       "38": "Unlock the Duplication rune!",
       "43": "Accelerator Boosts can be purchased from any screen. Unlock the Auto-Prestige feature.",
       "44": "Unlock the Prism Rune! Transcensions give more Offerings based on time spent (Up to +15 at 1800 seconds)",
-      "45": "Reduce tax scaling by up to 5%, depending on the length of Prestige.",
-      "46": "Reduce tax scaling by up to another 5%, depending on length of Prestige.",
-      "47": "Reduce tax scaling by up to ANOTHER 10%, depending on length of Prestige!",
+      "45": "Reduce tax scaling by 5%.",
+      "46": "Reduce tax scaling by another 5%.",
+      "47": "Reduce tax scaling by ANOTHER 10%!",
       "50": "Unlock new Atomic production and unlock 3 new incredibly difficult Challenges! Gain 2x particles on all future Reincarnations!",
       "51": "Manual Reincarnations give +4 Obtainium (unaffected by multipliers except time multiplier)!",
       "52": "Reincarnations give more Offerings based on time spent (Up to +25 at 1800 seconds)",
@@ -523,9 +527,9 @@
       "180": "Unlock Tier 6 Ant autobuy, and autobuy Hic and Experientia Ants! Add +1% Base Ant ELO.",
       "181": "Unlock Tier 7 Ant autobuy, and autobuy Praemoenio Ants! Add +2% Base Ant ELO.",
       "182": "Unlock Tier 8 Ant autobuy, and autobuy Scientia and Phylacterium Ants! Add +3% Base Ant ELO.",
-      "187": "Gain an Ascension Count multiplier based on your score: x{{x}}. Also: Offerings +{{y}}% [Max: 100% at 1M Ascensions]",
-      "188": "Gain +100 Ascension count for all Ascensions longer than 10 seconds. Also: Obtainium +{{x}}% [Max: 100% at 5M Ascensions]",
-      "189": "Gain 20% of Excess time after 10 seconds each Ascension as a linear multiplier to Ascension count. Also: Cubes +{{x}}% [Max: 200% at 500M Ascensions]",
+      "187": "Gain an Ascension Count multiplier based on your score: x{{x}}. Also: Offerings +{{y}}% [Max: 100% at 1e6 Ascensions]",
+      "188": "Gain +100 Ascension count for all Ascensions longer than 10 seconds. Also: Obtainium +{{x}}% [Max: 100% at 5e6 Ascensions]",
+      "189": "Gain 20% of Excess time after 10 seconds each Ascension as a linear multiplier to Ascension count. Also: Cubes +{{x}}% [Max: 200% at 5e8 Ascensions]",
       "193": "Gain {{x}}% more Cubes on Ascension!",
       "195": "Gain {{x}}% more Cubes and Tesseracts on Ascension! Multiplicative with the other Ach. bonus [MAX: 25,000% at e100,000 Const]",
       "196": "Gain {{x}}% more Platonic Cubes on Ascension! [MAX: 2,000% at e100,000 Const]",
@@ -534,7 +538,7 @@
       "199": "Gain +4% Cubes on Ascension!",
       "200": "Gain +4% Cubs on Ascension! Did I spell that wrong? You bet I did.",
       "201": "Gain +3% Cubes on Ascension!",
-      "202": "Gain 20% of Excess time after 10 seconds each Ascensions as a linear multiplier to Ascension count. Also: Tesseracts +{{x}}% [Max: 200% at 1B Ascensions]",
+      "202": "Gain 20% of Excess time after 10 seconds each Ascensions as a linear multiplier to Ascension count. Also: Tesseracts +{{x}}% [Max: 200% at 1e9 Ascensions]",
       "204": "You will gain 25% of Excess time after 10 seconds each Ascension as a linear multiplier to rewards.",
       "205": "Gain +4% Tesseracts on Ascension!",
       "206": "Gain +4% Tesseracts on Ascension!",
@@ -546,13 +550,13 @@
       "213": "Gain +4% Hypercubes on Ascension!",
       "214": "Gain +4% Hypercubes on Ascension!",
       "215": "Gain +3% Hypercubes on Ascension!",
-      "216": "Gain 20% of Excess time after 10 seconds each Ascensions as a linear multiplier to Ascension count. Also: Hypercubes +{{x}}% [Max: 200% at 2B Ascensions]",
+      "216": "Gain 20% of Excess time after 10 seconds each Ascensions as a linear multiplier to Ascension count. Also: Hypercubes +{{x}}% [Max: 200% at 2e9 Ascensions]",
       "218": "You gain gain 50% MORE MORE excess time (Total: 100%) after 10 seconds each Ascension as a linear multiplier to rewards.",
       "219": "Gain +4% Platonic Cubes on Ascension!",
       "220": "Gain +4% Platonic Cubes on Ascension!",
       "221": "Gain +4% Platonic Cubes on Ascension!",
       "222": "Gain +3% Platonic Cubes on Ascension!",
-      "223": "Gain 20% of Excess time after 10 seconds each Ascensions as a linear multiplier to Ascension count. Also: Platonic Cubes +{{x}}% [Max: 200% at 2.674B Ascensions]",
+      "223": "Gain 20% of Excess time after 10 seconds each Ascensions as a linear multiplier to Ascension count. Also: Platonic Cubes +{{x}}% [Max: 200% at 2.674e9 Ascensions]",
       "240": "Ascension Cube Gain Multipliers is VERY slightly affected by global speed multipliers: {{x}}x (Min: 1.10x, Max: 1.50x)",
       "250": "You gain a permanent +60% Obtainium and Offering bonus, with +6% all Cube types!",
       "251": "You gain a permanent +100% Obtainium and Offering bonus, with +10% all Cube types!",
@@ -567,9 +571,9 @@
       "261": "You will gain 10% more Ascension count, forever!",
       "262": "Ascensions are {{x}}% faster! Max: +10%",
       "263": "Ascensions are {{x}}% faster! Max: +10%",
-      "264": "Hepteracts +{{x}}% [Max: 40% at 8T Ascensions]!",
-      "265": "Hepteracts +{{x}}% [Max: 20% at 160T Ascensions]!",
-      "266": "Quarks +{{x}}% [Max: 10% at 1Qa Ascensions]!",
+      "264": "Hepteracts +{{x}}% [Max: 40% at 8e12 Ascensions]!",
+      "265": "Hepteracts +{{x}}% [Max: 20% at 1.6e14 Ascensions]!",
+      "266": "Quarks +{{x}}% [Max: 10% at 1e15 Ascensions]!",
       "267": "Ascension Score is boosted by {{x}}% [Max: 100% at 1e100,000 Const]",
       "270": "Hepteract Gain is boosted by {{x}}% [Max: 100% at 1e1,000,000 const], Constant Upgrade 1 boosted to 1.06 (from 1.05), Constant Upgrade 2 boosted to 1.11 (from 1.10).",
       "271": "When you open a Platonic Cube, gain {{x}} Hypercubes, rounded down [Max: 1 at 1e1,000,000 Const]"
@@ -577,7 +581,7 @@
     "alerts": {
       "36": "Congratulations on your first Prestige. The first of many. You obtain Offerings. You can use them in the new Runes tab! [Unlocked Runes, Achievements, Diamond Buildings and some Upgrades!]",
       "38": "Hmm, it seems you are getting richer, being able to get 1 Googol diamonds in a single Prestige. How about we give you another Rune? [Unlocked Duplication Rune in Runes tab!]",
-      "255": "Wow! You gained 1e17 (100 Quadrillion) score in a single Ascension. For that, you can now generate Hepteracts if you get above 1.66e17 (166.6 Quadrillion) score in an Ascension. Good luck!"
+      "255": "Wow! You gained 1e17 score in a single Ascension. For that, you can now generate Hepteracts if you get above 1.666e17 score in an Ascension. Good luck!"
     },
     "hover": "Hover over an achievement to view information.",
     "totalPoints": "Achievement Points: {{x}}/{{y}} [{{z}}%]",
@@ -615,12 +619,12 @@
       "4": "Scares you into running faster [up to x20]",
       "5": "Imitates your body through magic shape-shifting powers [up to x40]",
       "6": "Tries to please Ant God... but fails [Additional Offerings!]",
-      "7": "Helps you build a few things here and there [+3% Building Cost Delay / level, Cap 9,999,999%]",
+      "7": "Helps you build a few things here and there [+3% Building Cost Delay / level, up to 9,999,999%]",
       "8": "Knows how to salt and pepper food [Up to 1,000x Rune EXP!]",
-      "9": "Can make your message to Ant God a little more clear [+1 all Rune Levels / level, Cap 10 Million]",
+      "9": "Can make your message to Ant God a little more clear [+1 all Rune Levels / level, up to 10 Million]",
       "10": "Has big brain energy [Additional Obtainium!]",
       "11": "A valuable offering to the Ant God [Gain up to 3x Sacrifice Rewards!]",
-      "12": "Betray Ant God increasing the fragility of your dimension [Unlocks ant talisman, Up to 2x faster timers on most things]"
+      "12": "Betray Ant God increasing the fragility of your dimension [Unlocks ant talisman, up to 2x global speed]"
     },
     "descriptions": {
       "1": "Gain a Worker Ant for your everyday life. Gathers Galactic Crumbs. Essential!",
@@ -679,7 +683,7 @@
     "1": {
       "name": "No Multipliers Challenge || {{- value}} Completions",
       "flavor": "Multipliers make the game a little too fast. Let's take them out!",
-      "restrictions": "Transcend and reach the goal except Multipliers do nothing but act like Accelerators, which are nerfed by 50%!",
+      "restrictions": "Transcend and reach the goal except Multipliers instead act like Accelerators, which are nerfed by 50%!",
       "goal": "Goal: Gain {{value}} Coins in challenge.",
       "per": {
         "1": "+10 base Multiplier Boosts! [+0.05 to power!] Current: ",
@@ -687,7 +691,7 @@
         "3": "+0.04 base Rune exp per Offering! Current: "
       },
       "first": "+1 free Multiplier! +1 Base EXP per offering used!",
-      "start": "Start [No Multipliers]",
+      "start": "Start 'No Multipliers'",
       "current": {
         "1": "+{{value}} Boosts",
         "2": "+{{value}}% more Boosts",
@@ -705,7 +709,7 @@
         "3": "+0.25% Accelerator Power! Current: "
       },
       "first": "+1 base offering for Prestige and Transcensions.",
-      "start": "Start [No Accelerators]",
+      "start": "Start 'No Accelerators'",
       "current": {
         "1": "+{{value}} Accelerators",
         "2": "+{{value}}% A.Boost Power",
@@ -723,7 +727,7 @@
         "3": "When you use a rune, all other runes gain +0.01 EXP. Current: "
       },
       "first": "Gain an offering automatically every 2 seconds!",
-      "start": "Start [No Shards]",
+      "start": "Start 'No Shards'",
       "current": {
         "1": "Exponent +{{value}}",
         "2": "+{{value}}%",
@@ -733,7 +737,7 @@
     "4": {
       "name": "Cost+ Challenge || {{- value}} Completions",
       "flavor": "You're getting rich now, but inflation hasn't happened yet? I don't think so!",
-      "restrictions": "Transcend and reach the goal except Coin/Crystal producers, Accelerators and Multipliers cost more. [Gets harder each time!]",
+      "restrictions": "Transcend and reach the goal except Coin/Crystal producers, Accelerators and Multipliers cost more.",
       "goal": "Goal: Gain {{value}} Coins in challenge.",
       "per": {
         "1": "Accelerator Cost scale slows down by +5 purchases. Current: ",
@@ -741,7 +745,7 @@
         "3": "Building Cost Delay +0.5%. Current: "
       },
       "first": "None",
-      "start": "Start [Cost+]",
+      "start": "Start 'Cost+'",
       "current": {
         "1": "Accelerator Delay +{{value}}",
         "2": "Multiplier Delay +{{value}}",
@@ -751,7 +755,7 @@
     "5": {
       "name": "Reduced Diamonds Challenge || {{- value}} Completions",
       "flavor": "You ever wonder how you get so many diamonds?",
-      "restrictions": "Transcend and reach the goal except you gain far fewer Diamonds from all sources [Gets harder each time!]",
+      "restrictions": "Transcend and reach the goal except all sources of Diamonds are harshly reduced.",
       "goal": "Goal: Gain {{value}} Coins in challenge.",
       "per": {
         "1": "+0.01 Coin --> Diamond conversion exponent on Prestige! Current: ",
@@ -759,7 +763,7 @@
         "3": " "
       },
       "first": "None",
-      "start": "Start [Reduced Diamonds]",
+      "start": "Start 'Reduced Diamonds'",
       "current": {
         "1": "Exponent = ^{{value}}",
         "2": "Crystal production x{{value}}",
@@ -769,7 +773,7 @@
     "6": {
       "name": "Higher Tax Challenge || {{- value}} Completions",
       "flavor": "The tax man caught wind that you reincarnated recently...",
-      "restrictions": "Reincarnate and reach the goal except tax has a lower cap, and Coin production is divided by 1e250.",
+      "restrictions": "Reincarnate and reach the goal except taxes are much stronger. Coin production is divided by 1e250.",
       "goal": "Goal: Gain {{value}} Mythos Shards in challenge.",
       "per": {
         "1": "-3.5% Taxes [Multiplicative]! Current: ",
@@ -812,7 +816,7 @@
         "2": "Prism Rune Exp +20%! Current: ",
         "3": "Transcend Offerings +4%! Current: "
       },
-      "first": "Unlock the Anthill feature! Includes 20 new Researches. A Global Diamond Upgrade.",
+      "first": "Unlock the Anthill feature! Includes 20 new Researches, and a Global Diamond Upgrade.",
       "start": "Start <Cost++>",
       "current": {
         "1": "+{{value}}",
@@ -823,14 +827,14 @@
     "9": {
       "name": "No Runes Challenge || {{- value}} Completions",
       "flavor": "You'll never complain about Prism being bad again.",
-      "restrictions": "Reincarnate and reach the goal except runes always have level 1 effects. All coin production is divided by e2,000,000.",
+      "restrictions": "Reincarnate and reach the goal except runes always have level 1 effects. Coin production is divided by e2,000,000.",
       "goal": "Goal: Gain {{value}} Coins in challenge.",
       "per": {
         "1": "+1 free Ant level! Current: ",
         "2": "+10% Ant speed [Multiplicative!] Current: ",
         "3": "SI Rune Exp +20%! Current: "
       },
-      "first": "Unlock the Talismans feature! [In Runes tab]. A Global Diamond Upgrade.",
+      "first": "Unlock Talismans and Blessings! Also a Global Diamond Upgrade.",
       "start": "Start <No Runes>",
       "current": {
         "1": "+{{value}} free levels",
@@ -841,7 +845,7 @@
     "10": {
       "name": "Sadistic Challenge I || {{- value}} Completions",
       "flavor": "I'm sorry for what I've unleashed onto the world.",
-      "restrictions": "Reincarnate and reach the goal except run the first five challenges AT THE SAME TIME! Coin Production /e12,500,000.",
+      "restrictions": "Reincarnate and reach the goal except run the first five challenges AT THE SAME TIME! Coin Production is divided by e12,500,000.",
       "goal": "Goal: Gain {{value}} Coins in challenge.",
       "per": {
         "1": "+100 base ELO for sacrificing ants! Current: ",
@@ -859,11 +863,11 @@
     "11": {
       "name": "Reduced Ants Challenge || {{- value}} Completions",
       "flavor": "The great Ant War of '21 wiped off all of the skilled ants.",
-      "restrictions": "Ascend and reach the goal but only get free ant upgrades and from Challenge8/9 completions. FOR ASCENSION CHALLENGES YOU MUST CLEAR CHALLENGE 10 TO ATTEMPT THEM.",
+      "restrictions": "Ascend and reach the goal but you can't buy ant upgrades. To compensate, you gain free levels from Challenge 8/9 completions.",
       "goal": "Goal: Complete Challenge 10 [Sadistic Challenge I] {{value}} times.",
       "per": {
         "1": "+12 free Ant Levels! Current: ",
-        "2": "Ant Speed x(1e5)^completions! Current: ",
+        "2": "Ant Speed x1e5 [Multiplicative]! Current: ",
         "3": "+80 to Rune Caps! Current: "
       },
       "first": "Unlock 15 Researches, and unlock the ability to open Tesseracts! You also get to toggle Corruptions ;)",
@@ -895,7 +899,7 @@
     "13": {
       "name": "Tax+++ Challenge || {{- value}} Completions",
       "flavor": "Good luck with the IRS, buddy.",
-      "restrictions": "Ascend and reach the goal, but taxes are much higher and grow with challenge completions. Ant production ^0.23",
+      "restrictions": "Ascend and reach the goal, but taxes are much higher and grow with challenge completions. Ant production ^0.23.",
       "goal": "Goal: Complete Challenge 10 [Sadistic Challenge I] {{value}} times.",
       "per": {
         "1": "Taxes -3.33%! Multiplicative! Current: ",
@@ -905,7 +909,7 @@
       "first": "Unlock 15 Researches, and unlock the power of the Hypercube! Increase Corruption Cap by 2 levels, to 9! Finally, unlock two new corruptions! ;)",
       "start": "Start <[(Tax+++)]>",
       "current": {
-        "1": "+{{value}}% Corruption Tax",
+        "1": "-{{value}}% Tax",
         "2": "+{{value}} Talisman Level Cap",
         "3": "+{{value}}% Effectiveness"
       }
@@ -917,7 +921,7 @@
       "goal": "Goal: Complete Challenge 10 [Sadistic Challenge I] {{value}} times.",
       "per": {
         "1": "+50% stronger effect on researches 1x1 through 1x5. Current: ",
-        "2": "+1 research purchased per roomba tick! Current: ",
+        "2": "+1 research purchased per roomba tick (Immune to softcaps)! Current: ",
         "3": "+200 to Rune Caps! Current: "
       },
       "first": "Unlock 15 Researches, and a way to coalesce your power into the Singularity. Increase Corruption Cap by 2 levels, to 11! Finally, unlock two new corruptions! ;)",
@@ -947,7 +951,7 @@
       },
       "noGoal": "You will find no goal in sight, but get bonuses based on your best attempt."
     },
-    "header": "Is the base game too easy? Try these situations! [Click the icons to view challenge details!]",
+    "header": "Is the base game too easy? Try challenging yourself for some rewards! [Click the icons to view challenge details!]",
     "autoChallengeSweepOn": "Auto Challenge Sweep [ON]",
     "autoChallengeSweepOff": "Auto Challenge Sweep [OFF]",
     "retryChallengesOn": "Retry Challenges: ON",
@@ -1024,7 +1028,7 @@
       "47": "Wow! I want even MORE Obtainium!",
       "48": "Wow! I want to start ascension with an Ant.",
       "49": "Wow! I want to start ascension with a Challenge 6-8 completion.",
-      "50": "Wow! I want to be enlightened by the power of a thousand suns.",
+      "50": "Wow! I want to be enlightened by the power of a thousand moons.",
       "51": "Wow! A pile of Chocolate Chip Cookies.",
       "52": "Wow! A pile of Sugar Cookies.",
       "53": "Wow! A pile of Butter Cookies.",
@@ -1057,7 +1061,7 @@
       "80": "Wow! A Singular Cookie of the Grandma at the end of the Universe."
     },
     "upgradeDescriptions": {
-      "1": "[1x1] You got it! +16.666% 3D Cubes from Ascending per level.",
+      "1": "[1x1] You got it! +16.666% Wow! Cubes from Ascending per level.",
       "2": "[1x2] Plutus grants you +1 Offering per second, no matter what, per level. Also a +0.5% Recycling chance!",
       "3": "[1x3] Athena grants you +10% more Obtainium, and +80% Auto Obtainium per level.",
       "4": "[1x4] You keep those 5 useful automation upgrades in the upgrades tab!",
@@ -1067,11 +1071,11 @@
       "8": "[1x8] Automatically buy Particle Upgrades.",
       "9": "[1x9] The research automator in shop now automatically buys cheapest when enabled. It's like a roomba kinda!",
       "10": "[1x10] Unlock some tools to automate Ascensions or whatever. Kinda expensive but cool.",
-      "11": "[2x1] You got it again! +9.09% 3D Cubes from Ascending per level.",
+      "11": "[2x1] You got it again! +9.09% Wow! Cubes from Ascending per level.",
       "12": "[2x2] Raise building power to the power of (1 + level * 0.09).",
       "13": "[2x3] For each 20 Cubes opened at once, you get 1 additional tribute at random.",
-      "14": "[2x4] Iris shines her light on you. The effect power is now increased by +0.01 (+0.005 if >1000 tributes) per level.",
-      "15": "[2x5] Ares teaches you the Art of War. The effect power is now increased by +0.01 (+0.0033 if >1000 tributes) per level.",
+      "14": "[2x4] Iris shines her light on you, increasing the effect power by +0.01 (+0.005 if >1000 tributes) per level.",
+      "15": "[2x5] Ares teaches you the Art of War, increasing the effect power by +0.01 (+0.0033 if >1000 tributes) per level.",
       "16": "[2x6] You got it buster! +20 ALL max rune levels per level.",
       "17": "[2x7] Yep. +5 Exponent per level to crystals.",
       "18": "[2x8] Quantum tunnelling ftw. +20% global game speed.",
@@ -1080,13 +1084,13 @@
       "21": "[3x1] Perhaps score will benefit you more? Gain +5% more score on Ascensions per level.",
       "22": "[3x2] The exponent of the bonus of Artemis is increased by 0.05 per level.",
       "23": "[3x3] For each 20 Cubes opened at once, you get 1 additional tribute at random.",
-      "24": "[3x4] Plutus teaches you the Art of the Deal. The effect power is now increased by +0.01 (+0.0033 if >1000 tributes) per level.",
-      "25": "[3x5] Moloch lends you a hand in communicating with Ant God. The effect power is now increased by +0.01 (+0.0033 if >1000 tributes) per level.",
+      "24": "[3x4] Plutus teaches you the Art of the Deal, increasing the effect power by +0.01 (+0.0033 if >1000 tributes) per level.",
+      "25": "[3x5] Moloch lends you a hand in communicating with Ant God, increasing the effect power by +0.01 (+0.0033 if >1000 tributes) per level.",
       "26": "[3x6] Start Ascensions with 3 additional rune levels [Does not decrease EXP requirement] per level.",
       "27": "[3x7] Upon an Ascension, you will start with 1 of each Reincarnation building to speed up Ascensions.",
       "28": "[3x8] Well, I think you got it? Gain +1% of particles on Reincarnation per second.",
       "29": "[3x9] Add +4 to Reincarnation Challenge cap per level. Completions after 25 scale faster in requirement!",
-      "30": "[3x10] You now get +40% Cubes and Tesseracts forever!",
+      "30": "[3x10] You now get +40% Cubes and Tesseracts!",
       "31": "[4x1] You again? +5% more score on Ascensions per level.",
       "32": "[4x2] Gain +0.1% Rune EXP per second you have spent in an Ascension. This has no cap!",
       "33": "[4x3] For each 20 Cubes opened at once, you get yet another additional tribute at random.",
@@ -1098,8 +1102,8 @@
       "39": "[4x9] Instead of the multiplier being 1.03^(C10 completions), it is now 1.035^(C10 completions)!",
       "40": "[4x10] Athena is very smart (Rewards the same as others).",
       "41": "[5x1] Yeah yeah yeah, +5% score on Ascension per level. Isn't it enough?",
-      "42": "[5x2] You now gain +4% Obtainium per level, which is not dependent on corruptions!",
-      "43": "[5x3] Gain another +3% corruption-independent Obtainium per level.",
+      "42": "[5x2] You now gain +4% Obtainium per level, which is immune to corruptions!",
+      "43": "[5x3] Gain another +3% corruption-immune Obtainium per level.",
       "44": "[5x4] Blah blah blah Midas works harder (same rewards as before)",
       "45": "[5x5] Blah blah blah Hermes works harder (same rewards as before)",
       "46": "[5x6] Gain +5% more Offerings per level!",
@@ -1114,7 +1118,7 @@
       "55": "[Cx5] An inventive take on the original chip cookie. Increase Obtainium gain by 1% per level.",
       "56": "[Cx6] These are a little more exotic. Gain +1 more raw score from Challenge 1 completions per level.",
       "57": "[Cx7] Yum yum! Now we're talking... or maybe not. Increase the cap of Cube Upgrades 1x1, 2x1, 3x1, 4x1, 5x1 by 1.",
-      "58": "[Cx8] A bit festive! If there is an event, All Cube gain is multiplied by 1.25.",
+      "58": "[Cx8] A bit festive! If there is an event, all Cube gain is multiplied by 1.25. (If only events could be active...)",
       "59": "[Cx9] Quite sour for a cookie. But it increases your Ascension speed by 0.25% per level, so who is to complain?",
       "60": "[Cx10] Wow! Bakery had extra ginger from their christmas sale. Reduce the cost of buying Golden Quarks by 0.003% per level.",
       "61": "[Cx11] Edible but prone to mistakes. Adds 125 whole milliseconds to the tolerance of code 'time', and increases reward by +2% per level.",
@@ -1126,9 +1130,9 @@
       "67": "[Cx17] What the hell are in these??? Anyway, Metaphysics Talisman level cap is increased by 1,337.",
       "68": "[Cx18] What the heck! These aren't even cookies. +0.01% Quarks per level purchased of this upgrade. +5% more at level 1,000!",
       "69": "[Cx19] Cookies that you'll never remember again. +12% Golden Quarks this Singularity.",
-      "70": "[Cx20] The pinnacle of baking. Nothing you'll eat will taste better than this. Gain +0.01% more Octeracts on Ascension if the average level of all corruptions is at a minimum of 14.",
-      "71": "[Cx21] For each talisman rarity upgrade, multiply Obtainium gain by 1.04",
-      "72": "[Cx22] For each talisman rarity upgrade, multiply Offering gain by 1.04",
+      "70": "[Cx20] The pinnacle of baking. Nothing you'll eat will taste better than this. Gain +0.01% more Octeracts if the average level of all corruptions is at a minimum of 14.",
+      "71": "[Cx21] For each talisman rarity upgrade, multiply Obtainium gain by 1.04!",
+      "72": "[Cx22] For each talisman rarity upgrade, multiply Offering gain by 1.04!",
       "73": "[Cx23] Each level adds 1 bonus level to the Infinite Ascent rune!",
       "74": "[Cx24] Add +0.30 to all Corruption Multiplier values.",
       "75": "[Cx25] Each level adds +0.3% effectiveness to free Singularity-tier Upgrades per level! (additive with all other boosts)",
@@ -1141,7 +1145,7 @@
     "cubeMetadata": {
       "cost": "Cost: {{value1}} Wow! Cubes [+{{value2}} Levels]",
       "level": "Level: {{value1}} / {{value2}}",
-      "maxLevel": "Cost: 0 Wow! Cubes. This upgrade is maxed! wow"
+      "maxLevel": "This upgrade is maxed! (wow)"
     },
     "noCubesOpened": "OK. No cubes opened.",
     "howManyCubesOpen": "How many cubes would you like to open? You have {{x}}! \nYou can input a percentage of cubes to open, for example: \"50%\" or \"100%\". \nYou can start the input with \"-\" (put in a negative value) to put in a value, that will be saved, which means you open all cubes except the specified number (also works with %).",
@@ -1227,11 +1231,11 @@
       "63": "[3x13] If your Reincarnation lasts at least 2 seconds you gain +1 Obtainium per level.",
       "64": "[3x14] If your Reincarnation lasts at least 5 seconds you gain +2 Obtainium per level.",
       "65": "[3x15] Increase the rate of gaining Obtainium through Reincarnations by 20% per level.",
-      "66": "[3x16] Increase the maximum number of [No Multipliers] completions by 5 per level.",
-      "67": "[3x17] Increase the maximum number of [No Accelerators] completions by 5 per level.",
-      "68": "[3x18] Increase the maximum number of [No Shards] completions by 5 per level.",
-      "69": "[3x19] Increase the maximum number of [Cost+] completions by 5 per level.",
-      "70": "[3x20] Increase the maximum number of [Reduced Diamonds] completions by 5 per level.",
+      "66": "[3x16] Increase the maximum number of 'No Multipliers' completions by 5 per level.",
+      "67": "[3x17] Increase the maximum number of 'No Accelerators' completions by 5 per level.",
+      "68": "[3x18] Increase the maximum number of 'No Shards' completions by 5 per level.",
+      "69": "[3x19] Increase the maximum number of 'Cost+' completions by 5 per level.",
+      "70": "[3x20] Increase the maximum number of 'Reduced Diamonds' completions by 5 per level.",
       "71": "[3x21] Automatically gain completions for Challenge 1 while running a Reincarnation Challenge",
       "72": "[3x22] Automatically gain completions for Challenge 2 while running a Reincarnation Challenge",
       "73": "[3x23] Automatically gain completions for Challenge 3 while running a Reincarnation Challenge",
@@ -1335,10 +1339,10 @@
       "171": "[7x21] You should know how this goes. +0.4% Accelerators / level",
       "172": "[7x22] Accelerator Boosts += 0.004 * Accelerator Boosts",
       "173": "[7x23] A lot of a small +0.4% Multipliers per level",
-      "174": "[7x24] Epic Fragments boost Blessing power by 10% * Log10(Epic Shards + 1)",
+      "174": "[7x24] Epic Fragments boost Blessing power by 10% * log10(Epic Shards + 1)",
       "175": "[7x25] Automatically buy Constant Upgrades, if they are affordable! They also no longer subtract from your constant.",
       "176": "[8x1] Row 8 baby! +0.2% Rune Effectiveness / level.",
-      "177": "[8x2] +Log10(Crumbs)% to Ant production per level. Pretty cool buff ain't it?",
+      "177": "[8x2] +log10(Crumbs)% to Ant production per level. Pretty cool buff ain't it?",
       "178": "[8x3] +666 Base ELO per level! Spooky number of the devil.",
       "179": "[8x4] +0.04% more Offerings per level per midas level!",
       "180": "[8x5] +1 Export Quark per hour per level, yet again.",
@@ -1350,7 +1354,7 @@
       "186": "[8x11] Something something +0.2% Accelerators pretty cool!",
       "187": "[8x12] Something somewhere, +0.2% Accelerator Boosts!",
       "188": "[8x13] You are DUPLICATED. +0.2% Multipliers/level",
-      "189": "[8x14] Legendary Fragments increase Spirit powers by +15% multiplied by Log10(Legendary Fragments + 1)",
+      "189": "[8x14] Legendary Fragments increase Spirit powers by +15% multiplied by log10(Legendary Fragments + 1)",
       "190": "[8x15] Unlock Automations for all 5 of the Tesseract buildings.",
       "191": "[8x16] +0.1% Rune Effectiveness / level. Does this even do anything at this point?",
       "192": "[8x17] Each purchased level of Mortuus Est also increases Ascension Cube reward by +0.03%",
@@ -1359,7 +1363,7 @@
       "195": "[8x20] Gain +1 export Quark per level, and increases the max timer to redeem Quarks by 5 hours each!",
       "196": "[8x21] +0.3% faster ticks / level, because you just can't wait to become the Singularity.",
       "197": "[8x22] +0.6% Cubes in Ascension Bank / level. No one knows how. Bank error perhaps.",
-      "198": "[8x23] +0.06% tributes from Cubes / level!. Wow! Cubes really has a lot of manufacturing errors in your favor.",
+      "198": "[8x23] +0.06% tributes from Cubes / level! Wow! Cubes really has a lot of manufacturing errors in your favor.",
       "199": "[8x24] +10% faster Tesseract Buildings / level. THE ARISEN. WITH THE PRAISE OF THE SINGULARITY.",
       "200": "[8x25] Gain the power of a thousand suns! +0.01% Accelerators, A. Boosts, Multipliers, Offerings, and +0.004% Cubes, +0.04 Max Rune level, +(level/400) max Talisman Level, +(level/200) free Ants, 0.000666% Tax reduction per level."
     },
@@ -1395,8 +1399,8 @@
       "cubeToQuark": "Are your Quark gains from Cubes wimpy? Well, buy this for +50% Quarks from opening Wow! Cubes, forever!",
       "tesseractToQuark": "Are your Quark gains from Tesseracts wimpy? Well, buy this for +50% Quarks from opening Wow! Tesseracts, forever!",
       "hypercubeToQuark": "Are your Quark gains from Hypercubes wimpy? Well, buy this for +50% Quarks from opening Wow! Hypercubes, forever!",
-      "seasonPass2": "Five times the price gouge, twice the fun! +1.5% Wow! Hypercubes and Platonic Cubes per level.",
-      "seasonPass3": "Okay, now this is just ridiculous. +1.5% Wow! Hepteracts and Octeracts per level!",
+      "seasonPass2": "Four times the price gouge, twice the fun! +1.5% Wow! Hypercubes and Platonic Cubes per level.",
+      "seasonPass3": "Okay, now this is just ridiculous. +1.5% Wow! Hepteracts and... Octeracts(???) per level!",
       "chronometer": "You know, those Ascensions are kinda slow. Why don't I give you a +1.2% speedup to the timer per level?",
       "infiniteAscent": "Okay, for an exorbitant amount, you can obtain the 6th rune, which gives +35% Quarks and +125% all Cube types when maxed!",
       "calculator": "The PL-AT can do addition in the blink of an eye. Not much else though. +14% Quarks from using code 'add' per level, the first level provides the answer and the final level does it automatically!",
@@ -1404,7 +1408,7 @@
       "calculator3": "The PL-AT Ω is infused with some Unobtainium, which is epic! But furthermore, it reduces the variance of Quarks by code 'add' by 10% per level, which makes you more likely to get the maximum multiplier. It also has the ability to give +60 seconds to Ascension Timer per level using that code.",
       "calculator4": "The PL-AT δ runs at 4,096Hz, which is a huge improvement over previous models. Add attempts refill 4% faster per level! Final level adds 32 additional capacity!",
       "calculator5": "The PL-AT Γ model somehow performs more 'powerful' computations, whatever that means. +6 seconds of GQ Export timer per level. +1 capacity every 10 levels, with 6 more at final level!",
-      "calculator6": "The PL-AT _ model was made by Derpsmith, before he was banished from the industry forever. Gain 1 second of Octeract per usage per level. Final level grants 24 additional capacity!",
+      "calculator6": "The PL-AT _ model was made by Derpsmith, before he was banished from the industry forever. Gain 1 Octeract tick per usage per level. Final level grants 24 additional capacity!",
       "calculator7": "The PL-AT ΩΩ model was made by Derpsmith Ω, before he was banished from the industry forever. Gain 1 second of Blueberry Time per usage per level. Final level grants 48 additional capacity!",
       "constantEX": "The merchant has one last trick up its sleeve: It can augment your second constant upgrade to be marginally better, but it'll cost an arm and a leg! Instead of the cap being 10% (or 11% with achievements) it will be raised by 1% per level.",
       "powderEX": "Platonic himself gives you 2% better conversion rate on Overflux Orbs to Powder per level. This activates when Orbs expire.",
@@ -1422,7 +1426,7 @@
       "seasonPassLost": "One would be advised not to touch this. +0.1% Octeracts per level, whatever those are...",
       "challenge15Auto": "Your grandparents had to bend dimensions to gain Challenge 15 score, but not you! Updates Challenge 15 Exponent every tick while in challenge 15!",
       "extraWarp": "\"Hey dude, get in this portal I built up last night in my shed!\" said the Quack Merchant",
-      "autoWarp": "With the power of Quacks Warp machine will now be able to go into overdrive",
+      "autoWarp": "With the power of Quacks, the Warp machine will now be able to go into overdrive",
       "improveQuarkHept": "Did you know that after 1,000 Quark Hepteracts, their effect is raised to ^0.5? The Seal disapproves. Gain +2% to the diminishing return exponent.",
       "improveQuarkHept2": "After 1,024,000 Quark Hepts, their effect is raised to ^0.25!!! Nonsense. Gain +2% to all Quark Hept DRs.",
       "improveQuarkHept3": "After ~100 million Quark Hepts, their effect is raised to ^0.16! Absolute rubbish. Gain +2% to all Quark Hept DRs, yet again.",
@@ -1431,10 +1435,10 @@
       "shopImprovedDaily2": "Gain 1 additional free Singularity Upgrade and 20% more Golden Quarks per use of 'daily' per level!",
       "shopImprovedDaily3": "Gain 1 additional free Singularity Upgrade and 15% more Golden Quarks per use of 'daily' per level!",
       "shopImprovedDaily4": "Gain 1 additional free Singularity Upgrade and 100% more Golden Quarks per use of 'daily' per level!",
-      "offeringEX3": "Gain 2% more Offerings per level, multiplicative! (Multiplier is 1.02^level)",
-      "obtainiumEX3": "Gain 2% more Obtainium per level, multiplicative! (Multiplier is 1.02^level)",
-      "chronometerInfinity": "Gain +1% Ascension Speed per level, multiplicative! (Multiplier is 1.01^level)",
-      "seasonPassInfinity": "Gain +2% more cubes per level, multiplicative! (Multiplier is 1.02^level)",
+      "offeringEX3": "Gain 2% more Offerings per level, multiplicative! (Multiplier is 1.02^level!!!)",
+      "obtainiumEX3": "Gain 2% more Obtainium per level, multiplicative! (Multiplier is 1.02^level!!!)",
+      "chronometerInfinity": "Gain +1% Ascension Speed per level, multiplicative! (Multiplier is 1.01^level!!!)",
+      "seasonPassInfinity": "Gain +2% more cubes per level, multiplicative! (Multiplier is 1.02^level!!!)",
       "shopSingularityPenaltyDebuff": "Derpsmith was so proud of your performance in the first EXALT that he wants to make your singularity debuffs weaker. At a cost. A big cost.",
       "obtainiumEX2": "Gain +1% Obtainium per level per Singularity!!!",
       "improveQuarkHept5": "This is 1/50 as effective as a normal improver. Why? Because of balancing...",
@@ -1443,17 +1447,17 @@
       "shopAmbrosiaGeneration3": "It turns out adding more Obtainium Dust makes your charm more powerful, go figure. +1% faster Blueberry Time generation per level, stacking multiplicatively.",
       "shopAmbrosiaGeneration4": "What if you also added Quark Dust??? You will find out. +0.1% faster Blueberry Time generation per level, stacking multiplicatively.",
       "shopAmbrosiaLuck1": "Buying this charm grants +2 ☘ Ambrosia luck per level, for more Ambrosia! Don't know what that means? You soon will.",
-      "shopAmbrosiaLuck2": "You get a slightly larger four leaf clover, giving +2 ☘ Ambrosia luck per level, stacking additively.",
-      "shopAmbrosiaLuck3": "You get a slightly greener four leaf clover, giving +2 ☘ Ambrosia luck per level, stacking additively.",
-      "shopAmbrosiaLuck4": "You get a slightly 'better' four leaf clover, what ever that means, giving +0.6 ☘ Ambrosia luck per level, stacking additively.",
+      "shopAmbrosiaLuck2": "You get a slightly larger four leaf clover, giving +2 ☘ Ambrosia luck per level.",
+      "shopAmbrosiaLuck3": "You get a slightly greener four leaf clover, giving +2 ☘ Ambrosia luck per level.",
+      "shopAmbrosiaLuck4": "You get a slightly 'better' four leaf clover, what ever that means, giving +0.6 ☘ Ambrosia luck per level.",
       "shopAmbrosiaLuckMultiplier4": "Gain ☘ +1% Ambrosia Luck per level! Simple as that.",
-      "shopOcteractAmbrosiaLuck": "Gain ☘ +1 Ambrosia Luck per digit in your Wow! Octeract inventory per level. Simple as that.",
-      "shopCashGrabUltra": "For a nominal price, gain up to +20% Blueberry Speed, +80% Cubes and +12% Quarks per level based on Ambrosia, scaling nonlinearly until 10,000,000 lifetime earned.",
+      "shopOcteractAmbrosiaLuck": "Gain ☘ +1 Ambrosia Luck per digit in your lifetime Wow! Octeracts per level. Simple as that.",
+      "shopCashGrabUltra": "For a nominal price, gain up to +15% Blueberry Speed, +120% Cubes and +8% Quarks per level based on Ambrosia, scaling nonlinearly until 10,000,000 lifetime earned.",
       "shopAmbrosiaAccelerator": "Each level of this 'accelerator' provides <<cyan|+0.2>> real-life seconds of Blueberry Generation for every <<orange|1>> Ambrosia gained, from any source!",
       "shopEXUltra": "With this EX Upgrade, every 1,000 owned Ambrosia adds +0.1% <<orchid|Obtainium>>, <<orange|Offerings>> and <<white|Cubes>>! This effect caps at 125,000 * (level of shop upgrade)!",
-      "shopChronometerS": "With this upgrade, you gain +1% Ascension Speed and Global Speed per Singularity number above 200 your Singularity takes place!",
+      "shopChronometerS": "With this upgrade, you gain +1% Ascension Speed and Global Speed (multiplicative!) per Singularity number above 200 your Singularity takes place!",
       "shopAmbrosiaUltra": "For this absurdly expensive EX Upgrade, every EXALT completion grants +1 permanent ☘ Ambrosia Luck, per level.",
-      "shopSingularitySpeedup": "You know all those time-gated Singularity and Octeract Upgrades? Now they accumulate 50 times faster! Thanks to this weird clock that somehow alters even <<gray | Singular Time>>...",
+      "shopSingularitySpeedup": "You know how painfully slow Platonic DELTA/PHI are? Now they accumulate 50 times faster! It's thanks to this weird clock that somehow alters even <<gray | Singular Time>>...",
       "shopSingularityPotency": "You know all those free Singularity Upgrades? They are now 266% more effective (so, each is worth the equivalent to 3.66 levels, before softcaps). Why? This kinda weird <<gray | Singularity Transmission Ritual Device>>! Don't question it.",
       "shopSadisticRune": "What a weird rune; The shopkeeper (who you know no longer can see) says telepathically that it is an Infinite Ascent rune drenched in some <<gray | Singularity Matter>>. There were multiple infinite ascents?"
     },
@@ -1465,7 +1469,7 @@
     "header": "Welcome to the Quark Shop. You can't believe what's in stock!",
     "youHaveQuarks": "You have {{x}} Quarks!",
     "cannotRefund": "This item CANNOT be refunded! Take caution.",
-    "resetPermShop": "Reset Perm Shop [Cost: 15 Quarks]",
+    "resetPermShop": "Refund Shop [Cost: 15 Quarks]",
     "shopConfirmationOn": "Shop Confirmations: ON",
     "shopConfirmationOff": "Shop Confirmations: OFF",
     "hideMaxedOn": "Hide Maxed: ON",
@@ -1489,16 +1493,16 @@
       "antSpeed": "All Ants' Speed <<crimson|x{{amount}}>>",
       "cashGrab": "You will gain <<gold|{{amount}}%>> more Obtainium and Offerings!",
       "shopTalisman": "Even in a premium shop it's kinda obvious, right?",
-      "seasonPass": "Ascensions give <<lightgoldenrodyellow|{{amount}}%>> more Wow! Cubes and Tesseracts.",
+      "seasonPass": "Gain <<lightgoldenrodyellow|{{amount}}%>> more Wow! Cubes and Tesseracts.",
       "challengeExtension": "Reincarnation Challenges may be completed an additional <<lime|{{amount}}>> times.",
       "challengeTome": "Challenge 10 Exponent Requirement reduced by <<lightgoldenrodyellow|{{amount1}}>> Million. Past 60 completions of C9 or C10 the scaling multiplier is [completions * <<lightgoldenrodyellow|{{amount2}}>>]",
       "cubeToQuark": "Even in a premium shop it's kinda obvious, right?",
       "tesseractToQuark": "Even in a premium shop it's kinda obvious, right?",
       "hypercubeToQuark": "Even in a premium shop it's kinda obvious, right?",
-      "seasonPass2": "Ascensions give <<lightgoldenrodyellow|{{amount}}%>> more Hypercubes and Platonic Cubes.",
-      "seasonPass3": "Ascensions give <<lightgoldenrodyellow|{{amount}}%>> more Hepteracts and Octeracts.",
+      "seasonPass2": "Gain <<lightgoldenrodyellow|{{amount}}%>> more Hypercubes and Platonic Cubes.",
+      "seasonPass3": "Gain <<lightgoldenrodyellow|{{amount}}%>> more Hepteracts and... Octeracts???",
       "chronometer": "Ascension timer increases <<orange|{{amount}}%>> faster.",
-      "infiniteAscent": "The first level gives <<cyan|+10%>> Quarks, for free!",
+      "infiniteAscent": "The first level gives <<cyan|+10%>> Quarks for free!",
       "calculator": "Code 'add' provides <<cyan|{{amount1}}%>> more Quarks. AutoAnswer: <<orchid|{{bool1}}>>, AutoFill: <<orchid|{{bool2}}>>",
       "calculator2": "Code 'add' has <<orchid|{{amount1}}>> more capacity. 'add' generates <<cyan|{{amount2}}%>> more Quarks.",
       "calculator3": "Code 'add' rewards are <<orchid|{{amount1}}%>> less random. 'add' generates <<orchid|{{amount2}}>> seconds to Ascension Timer.",
@@ -1506,12 +1510,12 @@
       "calculator5": "Code 'add' generates <<orchid|{{amount1}}>> seconds of GQ export timer. Capacity is increased by <<orchid|+{{amount2}}>>.",
       "calculator6": "Code 'add' generates <<orchid|{{amount1}}>> seconds of Octeracts. Capacity is increased by <<orchid|+{{amount2}}>>.",
       "calculator7": "Code 'add' generates <<orchid|{{amount1}}>> seconds of Blueberry Generation. Capacity is increased by <<orchid|+{{amount2}}>>.",
-      "constantEX": "<<orange|+{{amount}}>> max percent on Constant Upgrade 2'",
+      "constantEX": "<<orange|+{{amount}}>> max percent on Constant Upgrade 2",
       "powderEX": "Gain <<red|+{{amount}}%>> Overflux Powder when Overflux Orbs expire (midnight, daily).",
       "chronometer2": "Ascension timer increases <<orange|{{amount}}%>> faster!",
       "chronometer3": "Ascension timer increases <<orange|{{amount}}%>> faster! This one <<red|never>> resets!",
-      "seasonPassY": "Ascensions give <<lightgoldenrodyellow|{{amount}}%>> more cubes (of <<orchid|all>> types) on Ascension.",
-      "seasonPassZ": "Ascensions give <<lightgoldenrodyellow|{{amount}}%>> more cubes (of <<orchid|all>> types) on Ascension. This one <<red|never>> resets!",
+      "seasonPassY": "Gain <<lightgoldenrodyellow|{{amount}}%>> more cubes of <<orchid|all>> types.",
+      "seasonPassZ": "Gain <<lightgoldenrodyellow|{{amount}}%>> more cubes of <<orchid|all>> types. This one <<red|never>> resets!",
       "challengeTome2": "Challenge 10 Exponent Requirement reduced by <<lightgoldenrodyellow|{{amount1}}>> Million. Past 60 completions of C9 or C10 the scaling multiplier is [completions * <<lightgoldenrodyellow|{{amount2}}>>]",
       "instantChallenge2": "Instant Challenge does <<orchid|+{{amount}}>> more challenges per tick.",
       "cubeToQuarkAll": "Cube to Quark Corner gives <<cyan|+{{amount}}%>> more Quarks!",
@@ -1535,8 +1539,8 @@
       "shopImprovedDaily4": "Code 'daily' grants <<turquoise|+{{amount1}}>> free Singularity Upgrades and <<turquoise|+{{amount2}}%>> more Golden Quarks.",
       "offeringEX3": "You will gain <<goldenrod|{{amount}}%>> more Offerings!",
       "obtainiumEX3": "You will gain <<pink|{{amount}}%>> more Obtainium!",
-      "chronometerInfinity": "Ascension timer increases <<orange|{{amount}}%>> faster.",
-      "seasonPassInfinity": "Ascensions give <<lightgoldenrodyellow|{{amount}}%>> more cubes (of <<orchid|all>> types) on Ascension.",
+      "chronometerInfinity": "Ascension timer increases <<orange|{{amount}}%>> faster!",
+      "seasonPassInfinity": "Gain <<lightgoldenrodyellow|{{amount}}%>> more cubes of <<orchid|all>> types!",
       "shopSingularityPenaltyDebuff": "At Singularity <<pink|{{amount1}}>>, your debuffs are as if you were in <<pink|{{amount2}}>>.",
       "shopAmbrosiaLuckMultiplier4": "Gain <<green|☘ +{{amount}}%>> Ambrosia Luck!",
       "shopOcteractAmbrosiaLuck": "Octeracts grant <<green|☘ +{{amount}}>> Ambrosia Luck!",
@@ -1553,8 +1557,8 @@
       "shopEXUltra": "Ambrosia increases <<orange|Offerings>>, <<orchid|Obtainium>> and <<white|Cubes>> by <<gold|{{amount}}%>>!",
       "shopChronometerS": "Ascension Speed and Global Speed are both increased by <<orange|{{amount}}%>>!",
       "shopAmbrosiaUltra": "Gain <<lime|☘ +{{amount}}>> Ambrosia Luck from your EXALT completions!",
-      "shopSingularitySpeedup": "Singularity Perks and Upgrades accumulate <<gray|{{amount}}>> times faster!",
-      "shopSingularityPotency": "Free Singularity Upgrades are as if you had <<gray|{{amount}}>> of them.",
+      "shopSingularitySpeedup": "Platonic DELTA/PHI accumulate <<gray|{{amount}}>> times faster!",
+      "shopSingularityPotency": "Free Singularity Upgrades act as if you had <<gray|{{amount}}>> of them.",
       "shopSadisticRune": "I'm not even sure what this rune can do. Have you purchased it? I can't see you, you know."
     }
   },
@@ -1581,7 +1585,7 @@
       },
       "unlimitedGrowth": {
         "name": "Unlimited Growth",
-        "default": "+10% to Quarks gain and Ascension Count for each Singularity. Currently: +{{amount}}%"
+        "default": "+10% Quarks and Ascension Count per Singularity. Currently: +{{amount}}%"
       },
       "goldenCoins": {
         "name": "Golden Coins",
@@ -1632,7 +1636,7 @@
       },
       "automationUpgrades": {
         "name": "Automation Upgrades",
-        "hasLevel5": "Having achieved 100 Singularity, you will never forget the taste of Wow! A pile of Chocolate Chip Cookies!",
+        "hasLevel5": "Having achieved Singularity 100, you will never forget the taste of Wow! A pile of Chocolate Chip Cookies!",
         "hasLevel4": "You always have w1x4 through w1x8 and w2x10; r6x5, r6x10 and r6x20. Automation Shop is also automatically purchased!",
         "hasLevel3": "You always have w1x4 through w1x8 and w2x10. Automation Shop is now automatically purchased!",
         "hasLevel2": "You always have w1x4 through w1x8 and w2x10.",
@@ -1652,7 +1656,7 @@
       },
       "potionAutogenerator": {
         "name": "Potion Autogenerator",
-        "default": "Every 180 Seconds, automatically use one potion for Obtainium and Offerings! Interval reduced by 3% per singularity."
+        "default": "Every 180 Seconds, automatically use one potion for Obtainium and Offerings for free! Also unlocks a faster version which uses these potions for NOT free. Interval reduced by 3% per singularity."
       },
       "respecBeGone": {
         "name": "Respec, be gone!",
@@ -1666,7 +1670,7 @@
       },
       "itAllAddsUp": {
         "name": "It all adds up",
-        "default": "The 'Add' Special Action reward & cooldown is divided by {{div}} while its maximum capacity is multiplied the same amount! (Rounded Up)."
+        "default": "The 'Add' Special Action reward & cooldown is divided by {{div}} while its maximum capacity is multiplied the same amount!."
       },
       "automagicalRunes": {
         "name": "Automagical Runes",
@@ -1702,12 +1706,12 @@
       },
       "overclocked": {
         "name": "Overclocked",
-        "default": "Level Caps on Certain Singularity Upgrades are increased by {{i}}!"
+        "default": "Level caps on certain Singularity Upgrades are increased by {{i}}!"
       },
       "wowCubeAutomatedShipping": {
         "name": "Wow! Cube Automated Shipping",
         "hasLevel1": "Automatically buy Cube Upgrades with each ascension, no matter where you are!",
-        "default": "Automatically buy Cube Upgrades with each ascension, but only if you are in a Singularity Challenge."
+        "default": "Automatically buy Cube Upgrades with each ascension, but only if you are in an EXALT."
       },
       "congealedblueberries": {
         "name": "Congealed Blueberries",
@@ -1728,7 +1732,7 @@
       "platonicClones": {
         "name": "Clones of Platonic Clicking at Your Desktop",
         "hasLevel1": "Automatically buy Platonic Upgrades with each ascension, without spending Obtainium or Offerings, anywhere!",
-        "default": "Automatically buy Platonic Upgrades with each ascension, without spending Obtainium or Offerings, but only in a Singularity Challenge."
+        "default": "Automatically buy Platonic Upgrades with each ascension, without spending Obtainium or Offerings, but only in an EXALT."
       },
       "platSigma": {
         "name": "PL-AT Σ",
@@ -1736,7 +1740,7 @@
       },
       "midasMilleniumAgedGold": {
         "name": "Midas' Millenium-Aged Gold",
-        "default": "Every use of the 'Add' Special Action gives 0.01 free levels of GQ1 and 0.05 free levels of GQ3."
+        "default": "Every use of the 'Add' Special Action gives 0.01 free levels of GQ1 and 0.05 free levels of GQ3, unaffected by 'It all adds up!'"
       },
       "goldenRevolution4": {
         "name": "Golden Revolution IV",
@@ -1759,8 +1763,8 @@
       },
       "primalPower": {
         "name": "Primal Power!",
-        "hasLevel1": "Gain awesome power by reaching Prime Numbered Singularities! Currently gaining: + <<limegreen|☘ 131>> & <<limegreen|☘ 269>> Ambrosia Luck!",
-        "default": "Gain awesome power by reaching Prime Numbered Singularities! Currently gaining: <<limegreen|☘ +131>> Ambrosia Luck!"
+        "hasLevel1": "Gain awesome power by reaching certain Prime Numbered Singularities! Currently gaining: + <<limegreen|☘ 131>> & <<limegreen|☘ 269>> Ambrosia Luck!",
+        "default": "Gain awesome power by reaching certain Prime Numbered Singularities! Currently gaining: <<limegreen|☘ +131>> Ambrosia Luck!"
       },
       "permanentBenefaction": {
         "name": "Permanent Benefaction",
@@ -1774,7 +1778,7 @@
     "data": {
       "goldenQuarks1": {
         "name": "Golden Quarks I",
-        "description": "In the future, you will gain 10% more Golden Quarks on Singularities per level!",
+        "description": "Gain 10% more Golden Quarks on Singularities per level!",
         "effect": "Permanently gain {{n}}% more Golden Quarks on Singularities."
       },
       "goldenQuarks2": {
@@ -1801,7 +1805,7 @@
       },
       "cookies": {
         "name": "Cookie Recipes I",
-        "description": "For just a few Golden Quarks, re-open Wow! Bakery, adding five cookie-related Cube upgrades.",
+        "description": "For just a few Golden Quarks, you can re-open Wow! Bakery, adding five cookie-related Cube upgrades.",
         "effectHave": "You have unlocked volume 1 of the recipe book.",
         "effectHaveNot": "You have not unlocked volume 1 of the recipe book."
       },
@@ -1819,7 +1823,7 @@
       },
       "cookies4": {
         "name": "Cookie Recipes IV",
-        "description": "This is a small price to pay for Salvation.",
+        "description": "This is a small price to pay for salvation.",
         "effectHave": "You have paid your price for salvation.",
         "effectHaveNot": "You have not paid your price for salvation."
       },
@@ -1831,7 +1835,7 @@
       },
       "ascensions": {
         "name": "Improved Ascension Gain",
-        "description": "Buying this, you will gain +2% Ascension Count forever, per level! Every 10 levels grants an additional, multiplicative +1% Ascension Count.",
+        "description": "Buying this, you will gain +2% Ascension Count forever, per level! Every 10 levels grants an additional +1% Ascension Count that multiplies with it.",
         "effect": "Ascension Count increases {{n}}% faster."
       },
       "corruptionFourteen": {
@@ -1858,7 +1862,7 @@
       },
       "singOfferings3": {
         "name": "Offering Tempest",
-        "description": "This bar is so prestine, it'll make anyone submit their Offerings. +4% per level, to be precise.",
+        "description": "This bar is so pristine, it'll make anyone submit their Offerings. +4% per level, to be precise.",
         "effect": "Permanently gain {{n}}% more Offerings."
       },
       "singObtainium1": {
@@ -1894,12 +1898,12 @@
       "singCitadel": {
         "name": "Citadel of Singularity",
         "description": "What a unique structual phenomenon... but it gives +2% Obtainium, Offerings, and 3-7D cubes per level! +1% Additional for every 10 levels!",
-        "effect": "Obtainium, Offerings, and 3-7D Cubes +{{n}}%, forever!"
+        "effect": "Obtainium, Offerings, and 3-7D Cubes +{{n}}%!"
       },
       "singCitadel2": {
         "name": "Citadel of 'Singularity': The Real Edition",
         "description": "This actual Citadel gives +2% Obtainium, Offerings, and 3-7D cubes per level! +1% Additional for every 10 levels! Also sets the free level of the fake citadel to whatever level this is.",
-        "effect": "Obtainium, Offerings, and 3-7D Cubes +{{n}}%, forever!"
+        "effect": "Obtainium, Offerings, and 3-7D Cubes +{{n}}%!"
       },
       "octeractUnlock": {
         "name": "Octeracts",
@@ -1909,8 +1913,9 @@
       },
       "singOcteractPatreonBonus": {
         "name": "Platonic $ells out!!!",
-        "description": "You know that Patreon bonus? Yeah, that's cool and all, but what if it also boosted Octeract production by the same amount?",
-        "effect": "Octeract production is {{n}}% faster for every $10 per month on the Patreon! Same as the Quark bonus which already exists."
+        "description": "How greedy of him! Oh well. Buying this makes Octeracts generate +100% faster!",
+        "effectHave": "Octeract production is 100% faster!",
+        "effectHaveNot": "Octeract production is not boosted!"
       },
       "offeringAutomatic": {
         "name": "Blueberry Shards! (WIP)",
@@ -1925,25 +1930,25 @@
       },
       "advancedPack": {
         "name": "Advanced Pack",
-        "description": "Now we're cooking with kerosene! Gain +4% Quarks stack with intermediate, +0.33 to all corruption score multipliers, regardless of level!",
+        "description": "Now we're cooking with kerosene! Gain +4% Quarks, +0.33 to all corruption score multipliers, regardless of level! (these Quark boosts stack additively)",
         "effectHave": "You have bought our advanced package.",
         "effectHaveNot": "You have not bought our advanced package."
       },
       "expertPack": {
         "name": "Expert Pack",
-        "description": "That's a handful! Gain +6% Quarks stack with advanced, 1.5x Ascension Score, Code 'add' gives 1.2x Ascension Timer.",
+        "description": "That's a handful! Gain +6% Quarks, 1.5x Ascension Score, and PL-AT Ω's Ascension timer boost is x1.2 stronger.",
         "effectHave": "You have switched to the expert provider.",
         "effectHaveNot": "You have not switched to the expert provider."
       },
       "masterPack": {
         "name": "Master Pack",
-        "description": "A tad insane. Gain +8% Quarks stack with expert, for every level 14 corruption, Ascension score is multiplied by 1.1.",
+        "description": "A tad insane. Gain +8% Quarks; for every level 14 corruption, Ascension score is multiplied by 1.1.",
         "effectHave": "You have mastered your inner chakras.",
         "effectHaveNot": "You have not mastered your inner chakras."
       },
       "divinePack": {
         "name": "Divine Pack",
-        "description": "OHHHHH. Gain +10% Quarks stack with master, and multiply Octeract gain by 7.77 if corruptions are all set to 14.",
+        "description": "OHHHHH. Gain +10% Quarks, and multiply Octeract gain by 7.77 if all corruptions are set to at least 14.",
         "effectHave": "You have found the reason for existence.",
         "effectHaveNot": "You have not found the reason for existence."
       },
@@ -1962,17 +1967,17 @@
       "potionBuff": {
         "name": "Potion Decanter of Enlightenment",
         "description": "Purported to actually be the fountain of youth, this item powers up potions considerably!",
-        "effect": "Potions currently give {{n}}x items!"
+        "effect": "Potions are {{n}}x more effective!"
       },
       "potionBuff2": {
         "name": "Potion Decanter of Inquisition",
         "description": "Staring at the glass, you aren't actually sure what this potion is.",
-        "effect": "Potions currently give {{n}}x items!"
+        "effect": "Potions are {{n}}x more effective!"
       },
       "potionBuff3": {
         "name": "Potion Decanter of Maddening Instability",
         "description": "SHE'S GONNA BLOW!!!! Said Midas, the Golden Quark Salesman. Oh yeah, did we mention he's in the game?",
-        "effect": "Potions currently give {{n}}x items!"
+        "effect": "Potions are {{n}}x more effective!"
       },
       "singChallengeExtension": {
         "name": "Bigger Challenge Caps",
@@ -1991,7 +1996,7 @@
       },
       "singQuarkImprover1": {
         "name": "Marginal Quark Gain Improver Thingy",
-        "description": "A doohickey that I forgot what it looked like. +0.5% Quarks per level, multiplicative with all other bonuses! Seems like it grows in cost a lot faster than anything else though. Also, did you know these descriptions can be arbitarily long?",
+        "description": "A doohickey that I forgot what it looked like. +0.5% Quarks per level, multiplicative with all other bonuses! Seems like it grows in cost a lot faster than anything else though. Like, a LOT faster. Also, did you know these descriptions can be arbitarily long?",
         "effect": "You gain {{n}}% more Quarks!"
       },
       "singQuarkHepteract": {
@@ -2031,32 +2036,32 @@
       },
       "singOcteractGain5": {
         "name": "The Eighth Wonder of the World",
-        "description": "is the wonder of the world we live in. [+1% Octeracts. Platonic, this is so stingy! but, he does not care one bit.]",
+        "description": "...is the wonder of the world we live in. [+1% Octeracts. Platonic, this is so stingy! but, he does not care one bit.]",
         "effect": "Octeract Gain +{{n}}%"
       },
       "platonicTau": {
         "name": "Platonic TAU",
-        "description": "Placed in the wrong upgrade section, this will remove any restrictions on corruptions or corruption level caps! Also raises 3d cube gain to the power of 1.01!",
-        "effectHave": "This upgrade has been purchased",
-        "effectHaveNot": "This upgrade has not been purchased"
+        "description": "Placed in the wrong upgrade section, this will remove any pre-Singularity restrictions on corruptions and their level caps! Also, it'll raise Wow! Cube gain by ^1.01!",
+        "effectHave": "Corruption restrictions removed! Wow! Cube gain ^1.01!",
+        "effectHaveNot": "Your Corruptions are still limited by your challenges and upgrades"
       },
       "platonicAlpha": {
         "name": "Platonic ALPHA...?",
-        "description": "Confusion ensues as to why there are two of these. This one is capitalized, so buying this ensures Platonic Alpha is always maxed!",
-        "effectHave": "This upgrade has been purchased",
-        "effectHaveNot": "This upgrade has not been purchased"
+        "description": "Confusion ensues as to why there are two of these. Ah well, if you buy this then Platonic Alpha will always be bought!",
+        "effectHave": "Platonic Alpha is permanently active! :D",
+        "effectHaveNot": "Platonic Alpha is not permanently active. :("
       },
       "platonicDelta": {
         "name": "Platonic DELTA",
         "description": "Time follows you towards the future, after getting this bad boy. Gain +100% more cubes per day in your current singularity, up to +900% at day 9.",
-        "effectHave": "This upgrade has been purchased",
-        "effectHaveNot": "This upgrade has not been purchased"
+        "effectHave": "Your Cubes are being boosted by the time in your current Singularity!",
+        "effectHaveNot": "Your Cubes are not being boosted."
       },
       "platonicPhi": {
         "name": "Platonic PHI",
         "description": "Time follows you toward the past as well. Gain 5 additional free Singularity Upgrades per day in your singularity from code daily, up to +50 after 10 days.",
-        "effectHave": "This upgrade has been purchased",
-        "effectHaveNot": "This upgrade has not been purchased"
+        "effectHave": "The time in your current Singularity is giving you even more free upgrades!",
+        "effectHaveNot": "Time is not following you toward the past... yet."
       },
       "singFastForward": {
         "name": "Etherflux Singularities",
@@ -2066,7 +2071,7 @@
       },
       "singFastForward2": {
         "name": "Aetherflux Singularities",
-        "description": "Golden Quark gained by Singularity is increased by 100% (additive) and going singular at your all time highest count gives +1 singularity count! It's like Etherflux but with an A.",
+        "description": "It's like Etherflux but with an A. Gain the same effect from Etherflux Singularities again!",
         "effectHave": "You've transformed the Aetherflux!",
         "effectHaveNot": "You haven't transformed the Aetherflux!"
       },
@@ -2078,7 +2083,7 @@
       "singAscensionSpeed2": {
         "name": "A mediocre ascension speedup!",
         "description": "Ascension speed is multiplied by 6 if you have not purchased Antiquities in your current Singularity.",
-        "effect": "The effect is clear"
+        "effect": "The effect is clear. You know, this would actually be pretty good if it wasn't unlocked so late..."
       },
       "WIP": {
         "name": "WIP TEMPLATE",
@@ -2088,11 +2093,12 @@
       "ultimatePen": {
         "name": "The Ultimate Pen",
         "description": "You. It is you who is the author of your own story!",
-        "effect": "You do {{n}} own the Ultimate Pen. {{m}}"
+        "effectHave": "They said it could not be done. But I knew it was possible. (Congratulations! You have beat the game.)",
+        "effectHaveNot": "You do not own the Ultimate Pen."
       },
       "oneMind": {
         "name": "ONE MIND",
-        "description": "A note, you found on the 'ground': seems like an advertisement for a cult. \"Lock your ascension speed to 10x, and multiply all cubes based on the difference.\" Hmm...",
+        "description": "A note that you found on the 'ground': seems like an advertisement for a cult. \"Lock your ascension speed to 10x, and multiply all cubes based on the difference.\" Hmm...",
         "effectHave": "You have joined the cult!",
         "effectHaveNot": "You haven't joined the cult!"
       },
@@ -2103,8 +2109,8 @@
         "effectHaveNot": "You haven't quacked your last QUARK"
       },
       "blueberries": {
-        "name": "Blueberry Shards! (WIP)",
-        "description": "Blueberries! Yeah, Platonic is out of ideas. Well, each Blueberry gives a 0.01% chance per second to generate some Ambrosia!",
+        "name": "Blueberries!",
+        "description": "Blueberries! These little things help you generate Ambrosia just a little faster.",
         "effect": "You have purchased {{n}} tasty blueberries."
       },
       "singAmbrosiaLuck2": {
@@ -2129,7 +2135,7 @@
       },
       "singAmbrosiaGeneration2": {
         "name": "Hourglass of Importance",
-        "description": "A somewhat important hourglass which somehow makes your blueberries generate seconds 1% faster per level..",
+        "description": "A somewhat important hourglass which somehow makes your blueberries generate seconds 1% faster per level.",
         "effect": "Blueberry Seconds Generation +{{n}}%(!)"
       },
       "singAmbrosiaGeneration3": {
@@ -2139,7 +2145,7 @@
       },
       "singAmbrosiaGeneration": {
         "name": "Hourglass of Limitlessness",
-        "description": "Remember- this hourglass is really important. But it gives +1% Blueberry Second Generation per level and is infinitely levelable!",
+        "description": "Remember- this hourglass is really important. It also gives +1% Blueberry Second Generation per level and is infinitely levelable!",
         "effect": "Blueberry Seconds Generation +{{n}}%(!)"
       },
       "singAmbrosiaGeneration4": {
@@ -2161,7 +2167,7 @@
       "hepteractCosts": "<<Pink|Hepteract Forge costs>> are multiplied by <<Pink|{{multiplier}}>>.",
       "penaltySmooth": "You will no longer experience sudden spikes in penalties.",
       "penaltyRough": "Your penalties will sharply worsen in <<var(--red-text-color)|Singularity {{num}}>>.",
-      "antiquitiesBought": "<<var(--green-text-color)|Antiquities of Ant God is maxed! Penalties are dispelled!>>",
+      "antiquitiesBought": "<<var(--green-text-color)|Antiquities of Ant God is leveled! Penalties are dispelled!>>",
       "antiquitiesNotBought": "<<var(--red-text-color)|Penalties are active because you have not leveled up Antiquities of Ant God!>>"
     }
   },
@@ -2226,7 +2232,7 @@
       "14": "Free Accelerators buff generation of Printers.",
       "15": "Free Accelerators buff generation of Mints.",
       "16": "Acceleration Multiplier buffs Diamond gain.",
-      "17": "Multiply Mint production by 1e+100.",
+      "17": "Multiply Mint production by 1e100.",
       "18": "Multiply Printer production based on Mythos Shards.",
       "19": "Multiply Investment production based on Mythos.",
       "20": "Coin upgrade 1 is raised to the eleventh power.",
@@ -2265,11 +2271,11 @@
       "53": "Augments produce more Shards based on Acceleration Multiplier.",
       "54": "Wizards produce more Enchantments based on Multiplier.",
       "55": "Grandmasters produce more Oracles based on Building power.",
-      "56": "Worker production is multiplied by 1e+5000.",
-      "57": "Investment production is multiplied by 1e+7500.",
-      "58": "Printer production is multiplied by 1e+15000.",
-      "59": "Coin Mint production is multiplied by 1e+25000.",
-      "60": "Alchemies production is multiplied by 1e+35000.",
+      "56": "Worker production is multiplied by 1e5000.",
+      "57": "Investment production is multiplied by 1e7500.",
+      "58": "Printer production is multiplied by 1e15000.",
+      "59": "Coin Mint production is multiplied by 1e25000.",
+      "60": "Alchemies production is multiplied by 1e35000.",
       "61": "Welcome to Reincarnation! +5% Offering Recycle, +2 EXP/Offering!",
       "62": "Completing Challenges, automatically or manually, increase Offerings gained in Reincarnation. Bonus subject to time multiplier!",
       "63": "Crystal Production is multiplied based on Particles to the sixth power [Caps at 1e6000x].",
@@ -2368,14 +2374,14 @@
     "constantUpgrades": {
       "1": "Make all Tesseract buildings {{level}}% more productive per level.",
       "2": "Each Tesseract building bought increases the production of all of them by 0.1% per level [Max {{max}}%].",
-      "3": "Increase Offering gain +2% per level.",
-      "4": "Increase Obtainium gain +4% per level.",
+      "3": "Increase Offering gain by +2% per level.",
+      "4": "Increase Obtainium gain by +4% per level.",
       "5": "Multiply Ant speed by (1 + log10(Constant + 1)/10)^level",
       "6": "Add +2 free Ant Levels per level.",
       "7": "Provides 7 free rune levels and increases the rune cap by 3 per level.",
       "8": "Increase the rune EXP given by Offerings by 10% per level [Additive]",
-      "9": "When bought, rune effectiveness is increased by Log4(Talisman Shards +1) %",
-      "10": "When bought, gain Log4(Constant + 1)% more Wow! Cubes and Tesseracts on Ascension."
+      "9": "When bought, rune effectiveness is increased by log4(Talisman Shards + 1)%",
+      "10": "When bought, gain log4(Constant + 1)% more Wow! Cubes and Tesseracts on Ascension."
     },
     "effects": {
       "1": "Effect: Worker Production x{{x}}",
@@ -2395,7 +2401,7 @@
       "15": "Effect: Mint Generation x{{x}}",
       "16": "Effect: Gain {{x}}x more Diamonds on Prestige",
       "17": "Effect: Mint Production x1e100 (Duh)",
-      "18": "Effect: Printer Production x",
+      "18": "Effect: Printer Production x{{x}}",
       "19": "Effect: Investment Production x{{x}}",
       "20": "Effect: All coin production is further multiplied by {{x}} [Stacks with upgrade 1]!",
       "21": "Effect: {{x}} Multipliers, +{{y}} Accelerators.",
@@ -2460,7 +2466,7 @@
       "80": "Effect: Ant ELO +75 if this upgrade is purchased.",
       "81": "Effect: All you need is right above this message.",
       "120": "Effect: All you need to know is right above this message!",
-      "121": "Effect: -50% Taxes duh!",
+      "121": "Effect: -50% Taxes, duh!",
       "122": "Effect: +88% cap to Crystal Upgrade 3, duh!",
       "123": "Effect: Coin Production ^1.025, duh!",
       "124": "Effect: +3% Effective Ant ELO, duh!",
@@ -2505,7 +2511,7 @@
       "runes": "Runes",
       "talismans": "Talismans",
       "blessings": "Blessings",
-      "spirits": "[=-Spirits-=]"
+      "spirits": "Spirits"
     },
     "challenges": {
       "normal": "Normal",
@@ -2767,8 +2773,8 @@
     "tesseractsYouHave": "You have {{tesseracts}} Wow! Tesseracts. Gain more by beating Challenge 10 on each Ascension.",
     "constantYouHave": "You have a mathematical constant of {{const}}. Taxes are divided by {{amount}}.",
     "costTesseracts": "Cost: {{tesseracts}} Tesseracts",
-    "autoTesseract": "Auto buyer will save at least {{tesseracts}} tesseracts. [Enter number above].",
-    "autoAscensionTesseract": "On Ascension, Auto buyer will save at least {{percent}}% of your current amount of tesseracts. [Enter number above].",
+    "autoTesseract": "Autobuyer will save at least {{tesseracts}} tesseracts. [Enter number above].",
+    "autoAscensionTesseract": "On Ascension, Autobuyer will save at least {{percent}}% of your current amount of tesseracts. [Enter number above].",
     "excessiveWealth": "Due to your excessive wealth, coin production is divided by {{div}} to pay taxes! {{- warning}}",
     "constantHover": "Hover over an icon for a description of the upgrade. Click to buy it!"
   },
@@ -2802,7 +2808,7 @@
       },
       "octeractQuarkGain": {
         "name": "Quark Octeract",
-        "description": "An altered forme of the hepteract, this gives a 1.1% Quark Bonus per level without Diminishing Return.",
+        "description": "An altered forme of the hepteract, this gives +1.1% Quarks per level.",
         "effect": "Quark gain is increased by {{n}}%."
       },
       "octeractQuarkGain2": {
@@ -2887,12 +2893,12 @@
       },
       "octeractOfferings1": {
         "name": "Offering Electrolosis",
-        "description": "Gain 1% more offerings per level.",
+        "description": "Gain 1% more Offerings per level.",
         "effect": "Offering gain +{{n}}%"
       },
       "octeractObtainium1": {
         "name": "Obtainium Deluge",
-        "description": "Gain 1% more obtainium per level.",
+        "description": "Gain 1% more Obtainium per level.",
         "effect": "Obtainium gain +{{n}}%"
       },
       "octeractAscensions": {
@@ -2952,22 +2958,22 @@
       },
       "octeractAmbrosiaGeneration2": {
         "name": "Hourglass of Minutiae",
-        "description": "A somewhat primative hourglass which somehow makes your blueberries generate seconds 1% faster per level..",
+        "description": "A somewhat primitive hourglass which somehow makes your blueberries generate seconds 1% faster per level.",
         "effect": "Blueberry Seconds Generation +{{n}}%(!)"
       },
       "octeractAmbrosiaGeneration3": {
         "name": "Hourglass of Myopathy",
-        "description": "An hourglass which is still primative, though somehow less so. +1% Blueberry Second Generation per level.",
+        "description": "An hourglass which is still primitive, though somehow less so. +1% Blueberry Second Generation per level.",
         "effect": "Blueberry Seconds Generation +{{n}}%(!)"
       },
       "octeractAmbrosiaGeneration": {
         "name": "Hourglass of Infinitude",
-        "description": "Don't get it twisted- this hourglass is really primative. But it gives +1% Blueberry Second Generation per level and is infinitely levelable!",
+        "description": "Don't get it twisted- this hourglass is really primitive. Fortunately, it gives +1% Blueberry Second Generation per level and is infinitely levelable!",
         "effect": "Blueberry Seconds Generation +{{n}}%(!)"
       },
       "octeractAmbrosiaGeneration4": {
         "name": "Hourglass of Reality",
-        "description": "An hourglass which is nonprimative and 'more timely'- whatever that means. +2% Blueberry Second Generation per level.",
+        "description": "An hourglass which is nonprimitive and 'more timely'- whatever that means. +2% Blueberry Second Generation per level.",
         "effect": "Blueberry Seconds Generation +{{n}}%(!)"
       }
     },
@@ -2991,16 +2997,16 @@
       "2": "+(Level/10) Multipliers every 10th level, +0.25% Multipliers per level. Tax growth is delayed more for each level!",
       "3": "~(1 + (Level/2)^2 * 2^(Level/2) / 256)x Crystal Production. +1 free level for each Crystal upgrade per 16 levels!",
       "4": "+0.125% building cost growth delay per level, +0.0625% Offering recycle chance per level [MAX: 25%], 2^((1000 - Level)/1100) Tax growth multiplier AFTER level 400",
-      "5": "~(1 + level/200)x Obtainium, (1 + Level^2/2500)x Ant Hatch Speed, +0.005 base Offerings for each tier per level",
+      "5": "~(1 + level/200)x Obtainium, (1 + Level^2/2500)x Ant Speed, +0.005 base Offerings per level.",
       "6": "+0.2% Quarks, +1% all Cube types per level! Start with +10% Quarks.",
       "7": "I wonder what happens if you feed it {{exp}} Rune EXP."
     },
     "power": {
       "1": "Speed Rune Bonus: +{{bonus}} Accelerators, +{{percent}}% Accelerators, +{{boost}} Accelerator Boosts.",
       "2": "Duplication Rune Bonus: +{{mult1}} Multipliers, +{{mult2}}% Multipliers, -{{tax}}% Tax Growth.",
-      "3": "Prism Rune Bonus: All Crystal Producer production multiplied by {{mult}}, gain +{{gain}}' free crystal levels.",
+      "3": "Prism Rune Bonus: All Crystal Producer production multiplied by {{mult}}, gain +{{gain}} free crystal levels.",
       "4": "Thrift Rune Bonus: Delay all producer cost increases by {{delay}}%. Offering recycle chance: +{{chance}}%. -{{tax}}% Tax Growth",
-      "5": "S. Intellect Rune Bonus: Obtainium gain x{{gain}}. Ant Speed: x{{speed}}. Base Offerings: +{{offerings}}",
+      "5": "S. Intellect Rune Bonus: x{{gain}} Obtainium, x{{speed}} Ant Speed, +{{offerings}} Base Offerings",
       "6": "IA Rune Bonus: Quark Gain +{{percent1}}%, Ascensions give +{{percent2}}% more of all cube types.",
       "7": "You cannot grasp the true form of Ant God's treasure."
     },
@@ -3012,7 +3018,7 @@
       "respecConfirm": "Confirm [-100,000 Offerings]",
       "respecConfirmAll": "Confirm All [-400,000 Offerings]",
       "respecCancel": "Cancel Respec Changes",
-      "respecSummary": "+-==-+ Select for 3 GREEN Runes, for Respec! +-==-+",
+      "respecSummary": "+-==-+ Select 3 GREEN Runes to Respec to! +-==-+",
       "buy": "BUY",
       "buyAll": "BUY ALL",
       "autoBuyOn": "Auto Buy: ON",
@@ -3137,7 +3143,7 @@
     },
     "exitChallenge": {
       "incompleteWarning": "WARNING: You will not get a completion as you have not yet purchased Antiquities.",
-      "confirmation": "Are you sure you want to quit {{name}} Tier {{tier}} \n{{warning}}`",
+      "confirmation": "Are you sure you want to quit {{name}} Tier {{tier}} \n{{warning}}",
       "decline": "Derpsmith tries to hug you, but he has no arms.",
       "acceptSuccess": "You have completed the {{tier}} tier of {{name}}! The corresponding challenge rewards have been updated.",
       "acceptFailure": "You have been transported back to your highest reached Singularity. Try again soon! -Derpsmith"
@@ -3181,8 +3187,8 @@
         "description": "Derpsmith put an embargo on Ascensions. Only (20 - completions) are allowed throughout the entire Singularity, before Ascensions trigger massive debuffs!<br/>Ascension Count Multiplier is hardcapped at 1. Oh and Delta is disabled. Ha.",
         "ScalingReward1": "<<orange|+0.1% Ascension Speed>> per Digit in your <<orange|Ascension Count!>>",
         "UniqueReward1": "1st - Permanently double the cap of <<Pink|all Hepteracts>> for free!!! (This is really good!)",
-        "UniqueReward2": "1st - A new feature ;) <<var(--red-text-color)|[WORK IN PROGRESS]>>",
-        "UniqueReward3": "20th - A bonus to <<Yellow|Cubes>>, <<steelblue|Obtainium>> & <<Gold|Offerings>> while in an EXALT! (Based on that Exalts total completions!)",
+        "UniqueReward2": "1st - A new feature ;) (actually this doesnt exist)",
+        "UniqueReward3": "20th - x1.04 <<Yellow|Cubes>>, <<steelblue|Obtainium>> & <<Gold|Offerings>> per completion of the EXALT you're in!",
         "UniqueReward4": "25th - A new <<orchid|Quark Shop>> Calculator, amazing!"
       },
       "noAmbrosiaUpgrades": {
@@ -3203,9 +3209,9 @@
         "ScalingReward1": "+6% <<orange|Global Speed>>!",
         "ScalingReward2": "+6% <<orange|Ascension Speed>>!",
         "ScalingReward3": "+1% <<cyan|Quarks>>!",
-        "UniqueReward1": "1st - your quarks no longer reset on singulatity!",
+        "UniqueReward1": "1st - your Quarks no longer reset on Singularity!",
         "UniqueReward2": "15th - A new <<orchid|Quark Shop>> upgrade!",
-        "UniqueReward3": "25th - A very expensive, not good, pretty bad <<orange|Quark Shop>> upgrade!"
+        "UniqueReward3": "25th - A very expensive, not good, pretty bad <<orange|Quark Shop>> upgrade! (Good luck getting this!)"
       },
       "sadisticPrequel": {
         "name": "SADISTIC EXALT III - The Prequel",
@@ -3246,7 +3252,7 @@
       "pureScientific": "Pure Scientific",
       "pureEngineering": "Pure Engineering"
     },
-    "currentNotation": "Current Annotation",
+    "currentNotation": "Current Notation",
     "iconSets": {
       "default": "Default",
       "legacy": "Legacy",
@@ -3294,7 +3300,7 @@
       "hypercubeQuarksToday": "Quarks gained from Hypercubes: <<cyan|{{amount}}>>",
       "hypercubeQuarksOpenRequirement": "Open {{amount}} Hypercubes for next quark.",
       "hypercubeQuarksOpenToday": "Hypercubes opened today: <<orchid|{{amount}}>>",
-      "platonicCubeQuarksToday": "Platonic Cubes gained from Cubes: <<cyan|{{amount}}>>",
+      "platonicCubeQuarksToday": "Quarks gained from Platonic Cubes: <<cyan|{{amount}}>>",
       "platonicCubeQuarksOpenRequirement": "Open {{amount}} Platonic Cubes for next quark.",
       "platonicCubeQuarksOpenToday": "Platonic Cubes opened today: <<orchid|{{amount}}>>"
     },
@@ -3365,7 +3371,49 @@
         "5": "Hypercube Statue: x{{amount}}: +{{bonus}}% ALL Hypercube bonuses",
         "6": "Keynesian Statue: x{{amount}}: +{{bonus}}% Bonus Constant exponent on taxes",
         "7": "High-Scoring Statue: x{{amount}}: +{{bonus}}% More Score on corruptions",
-        "8": "Chronos Statue: x{{amount}}: +{{bonus}}% <<yellow|true>> Global Speed (after speed diminishing returns)"
+        "8": "Chronos Statue: x{{amount}}: +{{bonus}}% <<yellow|true>> Global Speed (ignores diminishing returns)"
+      }
+    },
+    "platonicCubes": {
+      "descriptionBox": {
+        "descriptionDivisor": "===Upgrade Description===",
+        "descriptionDefault": "Click an icon for info!",
+        "costDivisor": "===Upgrade Costs===",
+        "upgradeLevel": "Level: {{a}}/{{b}}",
+        "upgradeLevelMaxed": "Level: {{a}}/{{b}} [MAXED]",
+        "offeringCost": "{{a}}/{{b}} Offerings",
+        "obtainiumCost": "{{a}}/{{b}} Obtainium",
+        "cubeCost": "{{a}}/{{b}} Wow! Cubes",
+        "tesseractCost": "{{a}}/{{b}} Wow! Tesseracts",
+        "hypercubeCost": "{{a}}/{{b}} Wow! Hypercubes",
+        "platonicCost": "{{a}}/{{b}} Platonic! Cubes",
+        "hepteractCost": "{{a}}/{{b}} Hepteracts of the Abyss",
+        "platonicCanBuy": "===Affordable! Click to buy!===",
+        "platonicCannotBuy": "===You cannot afford this!===",
+        "platonicCanBuyMaxed": "===Maxed==="
+      },
+      "upgradeDescriptions": {
+      "platonic1": "+0.009% Wow! Cubes per level, multiplied by the sum of Corruption levels!",
+      "platonic2": "+0.018% Wow! Tesseracts per level, multiplied by the sum of Corruption levels!",
+      "platonic3": "+0.054% Wow! Hypercubes per level, multiplied by the sum of Corruption levels!",
+      "platonic4": "+2.4% Wow! Platonic Cubes per level!",
+      "platonic5": "C10 Score multiplier x1.035 -> x1.0375. \n+0.1 Constant Tax exponent. \nx2 Tesseract Building production. \n+20% Quarks. \n+10 Reincarnation Challenge cap. \n+5 Ascension Challenge cap. \nx2 Offerings and Obtainium (Uncorruptable). \nCoin gain in C15 ^1.1. \nFinally, +1 Corruption level cap! \nIt's like an ALPHA version of what's to come.",
+      "platonic6": "Multiply Viscosity's free Accelerator/Multiplier exponent by 1+(level/30), capped at ^1. \nThe first of the anti-corruption upgrades...",
+      "platonic7": "Global speed below 1 is raised to ^1-(level/30), before uncorruptable effects.",
+      "platonic8": "Divide Hyperchallenged's effect by 1+(level/2.5), capped at x1.",
+      "platonic9": "Multiply Scientific Illiteracy's exponent by 1+0.09*log10(Obtainium), capped at 1e100 Obtainium and ^1. \nAlso, x2.5 Obtainium (Uncorruptable)!",
+      "platonic10": "C10 Score multiplier x1.0375 -> x1.04. \n+0.2 Constant Tax exponent. \nx10 Tesseract Building production. \n+25% Quarks. \n+10 Reincarnation Challenge cap. \n+5 Ascension Challenge cap. \nx3.5 Offerings and Obtainium (Uncorruptable). \nx2 all Cubes. \n^1.25 Ant exponent in C15. \nFinally, +1 Corruption level cap again! \nPerhaps this is the BETA version of Platonic OMEGA...?",
+      "platonic11": "If Market Deflation is set to 11 or higher, Reincarnations will also give diamonds! Only if this is bought, of course.",
+      "platonic12": "x(1+level/100) Ant production per Challenge completion (Uncorruptable)!",
+      "platonic13": "Drought's effect is raised to ^0.5!",
+      "platonic14": "Coin gain ^1.55, but only in Challenge 15.",
+      "platonic15": "You begin to find the start of the abyss... \nCoin gain ^1.1 in C15. \n+25% Challenge 15 Exponent. \n+0.2% Ascension Speed per Corruption level. \nx1.01 all Cubes per C9 completion. \n+30% Quarks. \nx1e250 Tesseract Building production. \nx2 Ascension Count. \n+30 Reincarnation Challenge cap. \n+20 Ascension Challenge cap. \nFinally, x6 Offerings and Obtainium (Uncorruptable)! \nTalk about a deep dive...",
+      "platonic16": "+1% Overflux Powder conversion rate per level. \n+2% Ascension Count per level. \nUp to +2% Ascension Count per level, based on Overflux Powder. \nFinally, x(Overflux Powder+1)^(10*level) Tesseract Building production!",
+      "platonic17": "If this is bought, Viscosity's score multiplier is raised to 3+(0.04*level)!",
+      "platonic18": "+0.1% to Constant Upgrade 1's effect per level! \nAlso, +0.3% to Constant Upgrade 2's cap per level!",
+      "platonic19": "Each level of this adds level/750 (~0.00133) to the Chronos Hepteract's diminishing return exponent! (Base: 1/6)",
+      "platonic20": "You know, maybe some things should be left unbought.",
+      "platonic20Sing": "Unlock Antiquities of Ant God!"
       }
     },
     "hepteractForge": {
@@ -3409,8 +3457,8 @@
           "oneCost": "One of these will cost you {{x}} Hepteracts, {{y}} Platonic Cubes and {{z}} Cubes."
         },
         "abyss": {
-          "effect": "It seems like this holds the power to be at the End of Time. Do you remember why you need this?",
-          "currentEffect": "<[You will submit to the Omega Entity of Time]>",
+          "effect": "This Hepteract of the Abyss holds the power to be at the End of Time. Do you remember why you need it?",
+          "currentEffect": "<[You will submit to the Omega Entity of Time!]>",
           "oneCost": "One of these will cost you {{x}} Hepteracts and {{y}} Wow! Cubes (lol)"
         },
         "accelerator": {
@@ -3469,7 +3517,7 @@
     "powderLumps": "You have {{x}} lumps of Overflux Powder.",
     "expiredOrbs": "Expired Overflux Orbs become powder at a rate of {{x}} Orbs per powder lump!",
     "dayWarpsRemaining": "Day Warps remaining today: {{x}}",
-    "warpImpossible": "Warping is impossible (you get multiplier to Quarks instead)",
+    "warpImpossible": "Warping is impossible! You get a multiplier to Quarks from opening Cubes instead.",
     "machineCooldown": "Sorry, but this machine is on cooldown.",
     "atleastPowder": "Sorry, but you need 25 powder to operate the warp machine.",
     "stumbleMachine": "You stumble upon a mysterious machine. A note attached says that you can reset daily Cube openings for 25 Powder. However it only works once each real life day. You in?",
@@ -3492,7 +3540,7 @@
     "wrongAnswer": "Answer was wrong, not resetting!",
     "unableImport": "Unable to import this file!",
     "loadTestInLive": "You are attempting to load a testing file in a non-testing version!",
-    "promocodePrompt": "Got a code? Great! Enter it in (CaSe SeNsItIvE). \n [Note to viewer: this is for events and certain always-active codes. \n May I suggest you type in \"synergism2021\" or \"Khafra\" perchance?]",
+    "promocodePrompt": "Got a code? Great! Enter it in (CaSe SeNsItIvE). \n [May I suggest you type in \"synergism2021\" or \"Khafra\" perchance?]",
     "comeBackSoon": "Alright, come back soon!",
     "noAddCodes": "You do not have an 'Add' code attempt! You will gain 1 in {{x}} seconds.",
     "useXAdds": "You can use up to {{x}} attempts at once. How many would you like to use? You can enter a negative value which will use all attempts except the specified number.",
@@ -3516,7 +3564,7 @@
         "calculator3": "Thanks to PL-AT Ω you have also gained {{x}} real-life seconds to your Ascension Timer!",
         "calculator5": "Thanks to PL-AT Γ you have additionally gained {{x}} real-life seconds to your GQ Export Timer!",
         "calculator6": "Thanks to PL-AT _ you have gained {{x}} seconds of Octeract generation!",
-        "calculator7": "Finally, thanks to PL-AT Ω you have gained {{x}} seconds of Blueberry Time Generation!",
+        "calculator7": "Finally, thanks to PL-AT ΩΩ you have gained {{x}} seconds of Blueberry Time Generation!",
         "calculatorSolution": "For {{w}} Quarks or nothing: What is {{x}} + {{y}}? The answer is {{z}} according to your calculator.",
         "calculatorPrompt": "For {{w}} Quarks or nothing: What is {{x}} + {{y}}?",
         "calculatorMaxed": "Your calculator figured out that {{a}} + {{b}} = {{c}} on its own, so you were awarded {{d}} Quarks! {{e}} {{f}} {{g}} {{h}} {{i}} You have {{j}} uses of Add. You will gain 1 in {{k}} seconds.",
@@ -3534,26 +3582,26 @@
         "prompt": "Are you sure? The house always wins!",
         "cancelled": "Scared? You should be!",
         "betPrompt": "How many Quarks are you putting up?",
-        "cheaters": "Due to cheaters, you can only bet 10k max.",
+        "cheaters": "Woah there buddy, we can't afford that! See, we don't let you bet over 10k Quarks because of some nasty cheaters...",
         "won": "You won. The Syncasino offers you a grand total of 25% of the pot! [+{{x}} Quarks]",
         "lost": "Try again... you can do it! [-{{x}} quarks]"
       },
       "time": {
-        "wait": "If you imported a save, you cannot use this code for 15 minutes to prevent cheaters.\n\nRegardless, you must wait at least 15 minutes between each use.",
+        "wait": "You must wait at least 15 minutes between each use.",
         "confirm": "Click the button within the next 15 seconds to test your luck! If you click within {{x}} ms of a randomly generated time, you will win a prize! This particular instance has a {{y}}x multiplier due to elapsed time between uses.",
         "won": "You clicked at the right time! [+{{x}} Quarkies]",
         "lost": "You didn't guess the right time, try again soon!",
         "ambrosia": "Your blueberries resonate slightly, giving {{blueberryTime}} real life seconds of Blueberry Time."
       },
       "spoiler": {
-        "moreThan1": "You will gain {{x}} Octeracts (when they come out) every second, assuming you have them unlocked!",
-        "one": "You will gain an Octeract (when they come out) every {{x}} seconds, assuming you have them unlocked!"
+        "moreThan1": "You will gain {{x}} Octeracts every second, assuming you have them unlocked!",
+        "one": "You will gain an Octeract every {{x}} seconds, assuming you have them unlocked!"
       },
       "invalid": "Your code is either invalid or already used. Try again!",
       "bribe": {
         "notUnlocked": "Hmmm... you aren't ready yet.",
         "overCapacity": "You can't hold more!",
-        "thanks": "Thank Alonso (in Discord) for the bribe."
+        "thanks": "Quark Hepteract capacity doubled. Thank Alonso for the bribe."
       }
     }
   },
@@ -3563,8 +3611,8 @@
     "onAscensionHepteractsCraft": "Okay. On Ascension, {{x}}% of your Hepteracts will be used in crafting.",
     "autoUpgradeOn": "Auto Upgrades: [ON]",
     "autoUpgradeOff": "Auto Upgrades: [OFF]",
-    "upgradeMaxIfPossible": "Upgrade: MAX [if possible wow]",
-    "upgradeOneLevelWow": "Upgrade: 1 Level wow",
+    "upgradeMaxIfPossible": "Upgrade: MAX Wow! Levels",
+    "upgradeOneLevelWow": "Upgrade: 1 Wow! Level",
     "saveOfferingsOn": "Save Offerings [ON]",
     "saveOfferingsOff": "Save Offerings [OFF]",
     "modeTime": "Mode: TIME",
@@ -3575,10 +3623,10 @@
     "dataPersistent": "Data on this page is now persistent! If you do not know what this means, you can safely ignore it.",
     "starRepo": "Please show your appreciation by giving the GitHub repo a star. ❤️ https://github.com/pseudo-corp/SynergismOfficial",
     "transferredFromLZ": "Transferred save to new format successfully!",
-    "allCorruptionsZero": "All Corruptions have been set to Zero. This will take effect on the next Ascension.",
+    "allCorruptionsZero": "All Corruptions have been set to zero. This will take effect on the next Ascension.",
     "corruptionLoadoutApplied": "Corruption Loadout {{x}} \"{{y}}\" has been applied. This will take effect on the next Ascension.",
-    "ascendPrompt": "Ascending will reset all buildings, rune levels [NOT CAP!], talismans, most researches, and the anthill feature for Cubes of Power. Continue?",
-    "reincarnatePrompt": "Reincarnating will reset EVERYTHING but in return you will get extraordinarily powerful Particles, and unlock some very strong upgrades and some new features. would you like to Reincarnate? [Disable this message in settings.]",
+    "ascendPrompt": "Ascending will reset almost everything before it in exchange for Wow! Cubes. Continue?",
+    "reincarnatePrompt": "Reincarnating will reset EVERYTHING up to this point but in return you will get extraordinarily powerful Particles, and unlock some very strong upgrades and some new features. would you like to Reincarnate? [Disable this message in settings.]",
     "transcendPrompt": "Transcends will reset coin and prestige upgrades, coin producers, crystal producers AND diamonds. The first Transcension unlocks new features. Would you like to Transcend? [Toggle this message in settings.]",
     "prestigePrompt": "Prestige will reset coin upgrades, coin producers AND crystals. The first Prestige unlocks new features. Would you like to Prestige? [Toggle this message in settings.]",
     "welcomeToSingularity": "Welcome to Singularity #{{x}}. You're back to familiar territory, but something doesn't seem right.",
@@ -3588,15 +3636,15 @@
     "singularityMessage3": "You're too powerful for this current universe. The multiverse of Synergism is truly endless, but out there are even more challenging universes parallel to your very own.",
     "singularityMessage4": "Start anew, and enter Singularity #{{x}}. Your next universe is harder than your current one, but unlock a permanent +10% Quark Bonus, +10% Ascension Count Bonus, and Gain {{y}} Golden Quarks, which can purchase game-changing endgame upgrades [Boosted by {{z}}% due to patreon bonus!].",
     "singularityMessage5": "However, all your past accomplishments are gone! ALL Challenges, Refundable Shop upgrades, Upgrade Tab, Runes, All Cube upgrades, All Cube Openings, Hepteracts (Except for your Quark Hepteracts), Achievements will be wiped clean.",
-    "singularityConfirm0": "Do you wish to start singularity #{{x}}? Your next universe is harder but you will gain {{y}} Golden Quarks.",
+    "singularityConfirm0": "Do you wish to start Singularity #{{x}}? Your next universe is harder but you will gain {{y}} Golden Quarks.",
     "singularityConfirm1": "So, what do you say? Do you wish to enter the Singularity?",
     "singularityConfirm2": "Are you sure you wish to enter the Singularity?",
-    "singularityConfirm3": "Are you REALLY SURE? You cannot go back from this (without an older savefile)! Confirm one last time to finalize your decision.",
+    "singularityConfirm3": "Are you REALLY SURE? You cannot go back from this! Confirm one last time to finalize your decision.",
     "noAntiquity": "Hmph. Please return with an Antiquity. Thank you. -Ant God",
-    "insideSingularityChallenge": "Derpsmith thinks you are in a Singularity Challenge. You may exit it by clicking on the challenge icon in the Exalt tab.",
-    "gameBeat": "Well. It seems you've reached the eye of the Singularity. I'm pleased. This also means there is nowhere to go from here. At least, not until higher powers expand your journey.",
-    "exitAscensionChallenge": "Are you absolutely sure that you want to exit the Ascension Challenge? You will need to clear challenge 10 again before you can attempt the challenge again!",
-    "buyResearch3x11": "[LOCKED - Buy Research 3x11]"
+    "insideSingularityChallenge": "Derpsmith thinks you are in a Singularity Challenge. You may exit it by clicking on the challenge icon in the EXALT tab.",
+    "gameBeat": "Well, it seems you've reached the eye of the Singularity. I'm pleased. This also means there is nowhere to go from here.",
+    "exitAscensionChallenge": "Are you absolutely sure that you want to exit the Ascension Challenge? Any progress you've made in this Ascension will be lost!",
+    "buyResearch3x11": "[???]"
   },
   "history": {
     "perSecondOn": "Per second: ON",

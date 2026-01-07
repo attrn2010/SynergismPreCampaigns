@@ -302,7 +302,7 @@ export const singularityChallengeData: Record<
         goldenQuarks: 1 + 0.12 * +(n > 0),
         blueberries: +(n > 0),
         shopUpgrade: n >= 20,
-        luckBonus: n >= 30 ? 0.04 : 0,
+        luckBonus: n >= 30 ? 0.06 : 0,
         shopUpgrade2: n >= 30
       }
     },
@@ -323,7 +323,7 @@ export const singularityChallengeData: Record<
     unlockSingularity: 40,
     HTMLTag: 'oneChallengeCap',
     singularityRequirement: (baseReq: number, completions: number) => {
-      return baseReq + 11 * completions
+      return Math.min(baseReq + 11 * completions, 276)
     },
     scalingrewardcount: 2,
     uniquerewardcount: 4,
@@ -410,7 +410,7 @@ export const singularityChallengeData: Record<
     unlockSingularity: 216,
     HTMLTag: 'limitedTime',
     singularityRequirement: (baseReq: number, completions: number) => {
-      return baseReq + 3 * completions
+      return Math.min(baseReq + 3 * completions, 277)
     },
     scalingrewardcount: 3,
     uniquerewardcount: 3,

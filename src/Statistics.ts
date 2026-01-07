@@ -2236,14 +2236,14 @@ export const gameStages = (): Stage[] => {
     {
       stage: 22,
       tier: 6,
-      name: 'onemind-end',
-      unlocked: player.singularityUpgrades.offeringAutomatic.level > 0,
+      name: 'onemind-exalt7x20',
+      unlocked: player.singularityChallenges.sadisticPrequel.completions > 19,
       reset: player.highestSingularityCount > 0
     },
     {
       stage: 23,
       tier: 6,
-      name: 'end-pen',
+      name: 'exalt7x20-pen',
       unlocked: player.singularityUpgrades.ultimatePen.level > 0,
       reset: player.highestSingularityCount > 0
     },

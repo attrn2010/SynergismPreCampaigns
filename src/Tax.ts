@@ -79,9 +79,7 @@ export const calculatetax = () => {
   exponent *= exp
   exponent *= 1 - 1 / 20 * player.researches[51] - 1 / 40 * player.researches[52] - 1 / 80 * player.researches[53]
     - 1 / 160 * player.researches[54] - 1 / 320 * player.researches[55]
-  exponent *= 1
-    - 0.05 / 1800 * (player.achievements[45] + player.achievements[46] + 2 * player.achievements[47])
-      * Math.min(player.prestigecounter, 1800)
+  exponent *= 1 - 0.05 * (player.achievements[45] + player.achievements[46] + 2 * player.achievements[47])
   exponent *= Math.pow(0.965, CalcECC('reincarnation', player.challengecompletions[6]))
   exponent *= 0.001 + .999 * (Math.pow(6, -(G.rune2level * G.effectiveLevelMult) / 1000))
   exponent *= 0.01 + .99 * (Math.pow(4, Math.min(0, (400 - G.rune4level) / 1100)))

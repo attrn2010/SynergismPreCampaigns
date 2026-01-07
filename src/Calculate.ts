@@ -3350,7 +3350,7 @@ export const calculateDilatedFiveLeafBonus = () => {
 export const calculateAdditiveLuckMult = () => {
   const arr = [
     1,
-    +player.singularityChallenges.noSingularityUpgrades.rewards.luckBonus, // No Singularity Upgrade 1x30
+    +player.singularityChallenges.noSingularityUpgrades.rewards.luckBonus, // No Singularity Upgrade 1x30 
     calculateDilatedFiveLeafBonus(), // Dilated Five Leaf Clover Perk
     player.shopUpgrades.shopAmbrosiaLuckMultiplier4 / 100, // EXALT-unlocked shop upgrade
     +player.singularityChallenges.noAmbrosiaUpgrades.rewards.luckBonus, // No Ambrosia Challenge Reward

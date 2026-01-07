@@ -998,7 +998,7 @@ export const shopDescriptions = (input: ShopUpgradeNames) => {
       break
     case 'calculator4':
       lol.innerHTML = i18next.t('shop.upgradeEffects.calculator4', {
-        amount1: format(2 * player.shopUpgrades.calculator4),
+        amount1: format(4 * player.shopUpgrades.calculator4),
         amount2: player.shopUpgrades.calculator4 === 10 ? 32 : 0
       })
       break
@@ -1413,11 +1413,11 @@ export const friendlyShopName = (input: ShopUpgradeNames) => {
     chronometerZ: 'Chronometer Z',
     obtainiumEX2: 'Obtainium EX 2',
     offeringEX2: 'Offering EX 2',
-    powderAuto: 'Automated Powder',
+    powderAuto: 'Instant Powder',
     seasonPassLost: 'Season Pass LOST',
     challenge15Auto: 'Challenge 15 Automation',
     extraWarp: 'Extra Warp',
-    autoWarp: 'a quack powered Warps?',
+    autoWarp: '...a quack powered Warps?',
     improveQuarkHept: 'Quark Hepteract 1',
     improveQuarkHept2: 'Quark Hepteract 2',
     improveQuarkHept3: 'Quark Hepteract 3',
@@ -1426,27 +1426,27 @@ export const friendlyShopName = (input: ShopUpgradeNames) => {
     shopImprovedDaily2: 'Improved Daily Code 2',
     shopImprovedDaily3: 'Improved Daily Code 3',
     shopImprovedDaily4: 'Improved Daily Code 4',
-    offeringEX3: 'The final Offering Upgrade',
-    obtainiumEX3: 'The final Obtainium Upgrade',
-    improveQuarkHept5: 'The final Quark Hepteract Improver',
-    chronometerInfinity: 'The final Chronometer',
-    seasonPassInfinity: 'The final Season pass',
+    offeringEX3: 'The ultimate Offering Upgrade',
+    obtainiumEX3: 'The ultimate Obtainium Upgrade',
+    improveQuarkHept5: 'The ultimate Quark Hepteract Improver',
+    chronometerInfinity: 'The ultimate Chronometer',
+    seasonPassInfinity: 'The ultimate Season pass',
     shopSingularityPenaltyDebuff: 'A Singularity Tenderizer',
-    shopAmbrosiaLuckMultiplier4: 'The Fourth Multiplicative Ambrosia Luck Multiplier',
+    shopAmbrosiaLuckMultiplier4: 'The Fourth Ambrosia Luck Multiplier',
     shopOcteractAmbrosiaLuck: 'Octeract-Based Ambrosia Luck Amplifier',
     shopAmbrosiaGeneration1: 'Ambrosia Generation Speedup',
     shopAmbrosiaGeneration2: 'Another Ambrosia Generation Speedup',
     shopAmbrosiaGeneration3: 'A better Ambrosia Generation Speedup',
-    shopAmbrosiaGeneration4: 'A FINAL Ambrosia Generation Speedup',
+    shopAmbrosiaGeneration4: 'The ultimate Ambrosia Generation Speedup',
     shopAmbrosiaLuck1: 'Ambrosia Luck Increaser',
     shopAmbrosiaLuck2: 'Another Ambrosia Luck Increaser',
-    shopAmbrosiaLuck3: 'A better Ambrosia Generation Speedup',
-    shopAmbrosiaLuck4: 'A FINAL Ambrosia Generation Speedup',
+    shopAmbrosiaLuck3: 'A better Ambrosia Luck Increaser',
+    shopAmbrosiaLuck4: 'The ultimate Ambrosia Luck Increaser',
     shopCashGrabUltra: 'It\'s the FINAL CASHGRAB!',
     shopAmbrosiaAccelerator: 'An Ambrosial Accelerator!',
-    shopEXUltra: 'It\'s the FINAL E X!',
+    shopEXUltra: 'It\'s the FINAL EX!',
     shopChronometerS: 'The FINAL Chronometer',
-    shopAmbrosiaUltra: 'The FINAL Ambrosia Exaltation... I don\'t flippin know!',
+    shopAmbrosiaUltra: 'The EXALTED Ambrosia Luck Increaser!',
     shopSingularitySpeedup: 'Singularity Timed-Perks Speedup',
     shopSingularityPotency: 'Singularity Passives Potency',
     shopSadisticRune: 'Sadistic Rune Unlock! Or does it?'
@@ -1694,7 +1694,7 @@ export const resetShopUpgrades = async (ignoreBoolean = false) => {
   if (!ignoreBoolean) {
     p = player.shopConfirmationToggle
       ? await Confirm(
-        'This will fully refund most of your permanent upgrades for an upfront cost of 15 Quarks. Would you like to do this?'
+        'This will fully refund your non-permanent upgrades for an upfront cost of 15 Quarks. Would you like to do this?'
       )
       : true
   }

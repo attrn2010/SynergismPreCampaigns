@@ -77,43 +77,43 @@ export const updatePCoinCache = async (name: PseudoCoinUpgradeNames, level: numb
 export const updatePCoinEffects = (name: PseudoCoinUpgradeNames, level: number) => {
   switch (name) {
     case 'INSTANT_UNLOCK_1':
-      PCoinUpgradeEffects.INSTANT_UNLOCK_1 = level > 0 ? 1 : 0
+      PCoinUpgradeEffects.INSTANT_UNLOCK_1 = 0 // level > 0 ? 1 : 0
       break
     case 'INSTANT_UNLOCK_2':
-      PCoinUpgradeEffects.INSTANT_UNLOCK_2 = level > 0 ? 1 : 0
+      PCoinUpgradeEffects.INSTANT_UNLOCK_2 = 0 // level > 0 ? 1 : 0
       break
     case 'CUBE_BUFF':
-      PCoinUpgradeEffects.CUBE_BUFF = 1 + level * 0.06
+      PCoinUpgradeEffects.CUBE_BUFF = 1 // 1 + level * 0.06
       break
     case 'AMBROSIA_LUCK_BUFF':
-      PCoinUpgradeEffects.AMBROSIA_LUCK_BUFF = level * 20
+      PCoinUpgradeEffects.AMBROSIA_LUCK_BUFF = level * 0 // level * 20
       break
     case 'AMBROSIA_GENERATION_BUFF':
-      PCoinUpgradeEffects.AMBROSIA_GENERATION_BUFF = 1 + level * 0.05
+      PCoinUpgradeEffects.AMBROSIA_GENERATION_BUFF = 1 // 1 + level * 0.05
       break
     case 'GOLDEN_QUARK_BUFF':
-      PCoinUpgradeEffects.GOLDEN_QUARK_BUFF = 1 + level * 0.04
+      PCoinUpgradeEffects.GOLDEN_QUARK_BUFF = 1 // 1 + level * 0.04
       break
     case 'FREE_UPGRADE_PROMOCODE_BUFF':
-      PCoinUpgradeEffects.FREE_UPGRADE_PROMOCODE_BUFF = 1 + level * 0.02
+      PCoinUpgradeEffects.FREE_UPGRADE_PROMOCODE_BUFF = 1 // 1 + level * 0.02
       break
     case 'CORRUPTION_LOADOUT_SLOT_QOL':
-      PCoinUpgradeEffects.CORRUPTION_LOADOUT_SLOT_QOL = level
+      PCoinUpgradeEffects.CORRUPTION_LOADOUT_SLOT_QOL = 0 // level
       corruptionLoadoutTableCreate()
       updateCorruptionLoadoutNames()
       break
     case 'AMBROSIA_LOADOUT_SLOT_QOL':
-      PCoinUpgradeEffects.AMBROSIA_LOADOUT_SLOT_QOL = level
+      PCoinUpgradeEffects.AMBROSIA_LOADOUT_SLOT_QOL = 0 // level
       displayProperLoadoutCount()
       break
     case 'AUTO_POTION_FREE_POTIONS_QOL':
-      PCoinUpgradeEffects.AUTO_POTION_FREE_POTIONS_QOL = level > 0 ? 1 : 0
+      PCoinUpgradeEffects.AUTO_POTION_FREE_POTIONS_QOL = 0 // level > 0 ? 1 : 0
       break
     case 'OFFLINE_TIMER_CAP_BUFF':
-      PCoinUpgradeEffects.OFFLINE_TIMER_CAP_BUFF = 1 + level
+      PCoinUpgradeEffects.OFFLINE_TIMER_CAP_BUFF = 1 // 1 + level
       break
     case 'ADD_CODE_CAP_BUFF':
-      PCoinUpgradeEffects.ADD_CODE_CAP_BUFF = 1 + level
+      PCoinUpgradeEffects.ADD_CODE_CAP_BUFF = 1 // 1 + level
       break
   }
 }

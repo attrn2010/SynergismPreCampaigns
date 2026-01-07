@@ -597,12 +597,15 @@ tabRow.appendButton(
     .makeDraggable()
     .makeRemoveable(),
   new $Tab({ class: 'isEvent', id: 'eventtab', i18n: 'tabs.main.unsmith' })
+    .setUnlockedState(() => player.highestSingularityCount > 999) // It's not like events happen here anyway...
     .setType(Tabs.Event)
     .makeDraggable()
     .makeRemoveable(),
   new $Tab({ id: 'pseudoCoinstab', i18n: 'tabs.main.purchase' })
+    .setUnlockedState(() => player.highestSingularityCount > 999) // Impossible requirement to get this shit outta here lmao
     .setType(Tabs.Purchase)
     .makeDraggable()
+    .makeRemoveable(),
 )
 
 /**

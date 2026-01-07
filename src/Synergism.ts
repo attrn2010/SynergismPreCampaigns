@@ -147,7 +147,7 @@ import {
 import { DOMCacheGetOrSet } from './Cache/DOM'
 import { lastUpdated, prod, testing, version } from './Config'
 import { WowCubes, WowHypercubes, WowPlatonicCubes, WowTesseracts } from './CubeExperimental'
-import { eventCheck } from './Event'
+//import { eventCheck } from './Event'
 import {
   AbyssHepteract,
   AcceleratorBoostHepteract,
@@ -3061,9 +3061,10 @@ export const format = (
     mantissa = 1
   }
 
-  // If the power is less than 15 it's effectively 0
+  // If the power is less than 15 it's effectively 0 || // New change: if it's less than *300* it's effectively 0
+  // Changing it to 300 fixes the age-old issue of pure scientific/engineering saying 0 for numbers lower than 1e-15
 
-  if (power < -15) {
+  if (power < -300) {
     return '0'
   }
   if (player.notation === 'Pure Engineering') {
@@ -4539,7 +4540,7 @@ export const updateAntMultipliers = (): void => {
   G.globalAntMult = G.globalAntMult.times(
     Decimal.pow(
       Math.max(1, player.researchPoints),
-      G.effectiveRuneBlessingPower[5]
+      G.effectiveRuneBlessingPower[5] // interesting
     )
   )
   G.globalAntMult = G.globalAntMult.times(
@@ -5073,7 +5074,7 @@ export const resetCheck = async (
       return Alert(i18next.t('main.noAntiquity'))
     }
 
-    const thankSing = 300
+    const thankSing = 277 // 277 instead of 300. This is my ultimate goal
 
     if (player.insideSingularityChallenge) {
       return Alert(i18next.t('main.insideSingularityChallenge'))
@@ -6302,7 +6303,7 @@ export const reloadShit = (reset = false) => {
   constantIntervals()
   changeTabColor()
 
-  eventCheck()
+/*  eventCheck()
     .catch(() => {})
     .finally(() => {
       setInterval(
@@ -6313,6 +6314,7 @@ export const reloadShit = (reset = false) => {
         1000 * 60 * 5
       )
     })
+*/
   showExitOffline()
   clearTimeout(preloadDeleteGame)
 
